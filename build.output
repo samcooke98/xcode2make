@@ -1,0 +1,643 @@
+Generating Header Folder
+mkdir -p ./build/intermediate//include//../include/React
+Copying headers...
+cp: omitting directory './node_modules/react-native/React/'
+makefiles/React.mk:64: recipe for target 'libReact.a' failed
+make: [libReact.a] Error 1 (ignored)
+Building files for React
+cd /mnt/c/Dev/XcodeProjectDumper/build/intermediate;  /root/theos//toolchain/linux/iphone/bin/armv7-apple-darwin11-clang++ -x objective-c -isysroot "/root/theos/sdks/iPhoneOS9.2.sdk" -std=gnu99 -fobjc-arc -Os -g -fmodules -Wextra -Wall -Wno-sign-conversion -Wno-infinite-recursion -Wno-missing-field-initializers -Wno-missing-prototypes      -Werror=return-type -Wunreachable-code -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wmissing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -Wnon-modular-include-in-framework-module -Werror=non-modular-include-in-framework-module -Wno-trigraphs -Wprotocol -Wdeprecated-declarations -Wextra -Wall -fstrict-aliasing -fasm-blocks -fmodules -fmodules-prune-interval=86400 -fmodules-prune-after=345600 -fpascal-strings -fobjc-abi-version=2 -fobjc-legacy-dispatch -I/root/theos/include/iphone/ -I/root/theos/include/ -I/root/theos/vendor/include -I/root/theos/include/_fallback -I/mnt/c/Dev/node_modules/react-native/ReactCommon/yoga/ -I/mnt/c/Dev/node_modules/react-native/React -I/mnt/c/Dev/node_modules/react-native/React/Base -I/mnt/c/Dev/node_modules/react-native/CSSLayout -I./build/intermediate//include/ -arch armv7  -c /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTConvert+MapKit.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTStatusBarManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTSourceCode.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Profiler/RCTJSCProfiler.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTMultipartStreamReader.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTDatePicker.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTFrameUpdate.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTAlertManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTI18nUtil.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTJSStackFrame.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTConvert.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTSegmentedControl.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTRootView.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTExceptionsManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTMapAnnotation.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTDevMenu.mm /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTRootShadowView.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTModuleMethod.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTMultipartDataTask.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTBorderDrawing.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTAssert.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTSlider.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTAsyncLocalStorage.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTProgressViewManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Profiler/RCTFPSGraph.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTSwitch.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTDisplayLink.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTSwitchManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTActivityIndicatorViewManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTViewManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTImageSource.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTDatePickerManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Profiler/RCTProfileTrampoline-x86_64.S /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTEventEmitter.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTJavaScriptLoader.mm /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Profiler/RCTPerfMonitor.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Profiler/RCTProfileTrampoline-arm64.S /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Profiler/RCTProfileTrampoline-i386.S /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTFont.mm /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTScrollViewManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTTabBarManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/JSCSamplingProfiler.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTWrapperViewController.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTScrollView.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTReloadCommand.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTAccessibilityManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Executors/RCTJSCErrorHandling.mm /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTDevLoadingView.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTTiming.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTAppState.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Executors/RCTJSCExecutor.mm /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTBatchedBridge.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/UIView+React.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTSliderManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTClipboard.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTModuleData.mm /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTPerformanceLogger.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTTouchHandler.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTErrorInfo.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTLog.mm /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTNavItemManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTParserUtils.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTPlatform.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTMapOverlay.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTKeyboardObserver.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTI18nManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTConvert+CoreLocation.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTTabBarItemManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTKeyCommands.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTUtils.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTMapManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTRefreshControl.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTWebView.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTBridge.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTWebViewManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTPicker.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTTabBarItem.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTModalHostView.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTShadowView.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Profiler/RCTProfileTrampoline-arm.S /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTSegmentedControlManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTPickerManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTRefreshControlManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTBundleURLProvider.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTActivityIndicatorView.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTNavigator.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTTabBar.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTRedBox.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTModalHostViewController.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTMap.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTNavItem.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTEventDispatcher.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTModalHostViewManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTUIManager.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTTouchEvent.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Profiler/RCTProfile.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTConvert+Transform.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTComponentData.m /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTNavigatorManager.m
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTConvert+MapKit.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTConvert+MapKit.h:12:
+/root/theos/include/iphone/React/RCTConvert.h:19:9: fatal error: 'yoga/Yoga.h' file not found
+#import <yoga/Yoga.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTStatusBarManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTStatusBarManager.h:12:
+/root/theos/include/iphone/React/RCTConvert.h:19:9: fatal error: 'yoga/Yoga.h' file not found
+#import <yoga/Yoga.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTSourceCode.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTSourceCode.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Profiler/RCTJSCProfiler.m:14:9: fatal error: 'RCTLog.h' file not found
+#import "RCTLog.h"
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTDatePicker.m:12:9: fatal error: 'RCTUtils.h' file not found
+#import "RCTUtils.h"
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTAlertManager.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTAlertManager.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTConvert.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTConvert.h:19:9: fatal error: 'yoga/Yoga.h' file not found
+#import <yoga/Yoga.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTSegmentedControl.m:12:9: fatal error: 'RCTConvert.h' file not found
+#import "RCTConvert.h"
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTRootView.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTRootView.h:12:
+/root/theos/include/iphone/React/RCTBridge.h:13:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTExceptionsManager.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTExceptionsManager.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTDevMenu.mm:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTDevMenu.h:12:
+/root/theos/include/iphone/React/RCTBridge.h:13:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTRootShadowView.m:10:9: fatal error: 'RCTI18nUtil.h' file not found
+#import "RCTI18nUtil.h"
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTModuleMethod.m:15:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTBridge+Private.h:10:
+/root/theos/include/iphone/React/RCTBridge.h:13:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTBorderDrawing.m:11:9: fatal error: 'RCTLog.h' file not found
+#import "RCTLog.h"
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTAsyncLocalStorage.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTAsyncLocalStorage.h:10:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTProgressViewManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTProgressViewManager.h:10:
+/root/theos/include/iphone/React/RCTViewManager.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Profiler/RCTFPSGraph.m:12:9: fatal error: 'RCTAssert.h' file not found
+#import "RCTAssert.h"
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTSwitch.m:12:9: fatal error: 'RCTEventDispatcher.h' file not found
+#import "RCTEventDispatcher.h"
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTDisplayLink.m:16:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTBridgeModule.h:102:1: error: property with 'retain (or strong)' attribute must be of object type
+@property (nonatomic, strong, readonly) dispatch_queue_t methodQueue;
+^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTDisplayLink.m:18:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTModuleData.h:69:1: error: property with 'retain (or strong)' attribute must be of object type
+@property (nonatomic, strong, readonly) dispatch_queue_t methodQueue;
+^
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTDisplayLink.m:19:9: fatal error: 'RCTProfile.h' file not found
+#import "RCTProfile.h"
+        ^
+3 errors generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTSwitchManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTSwitchManager.h:10:
+/root/theos/include/iphone/React/RCTViewManager.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTActivityIndicatorViewManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTActivityIndicatorViewManager.h:10:
+/root/theos/include/iphone/React/RCTViewManager.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTViewManager.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTViewManager.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTImageSource.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTImageSource.h:12:
+/root/theos/include/iphone/React/RCTConvert.h:19:9: fatal error: 'yoga/Yoga.h' file not found
+#import <yoga/Yoga.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTDatePickerManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTDatePickerManager.h:10:
+/root/theos/include/iphone/React/RCTConvert.h:19:9: fatal error: 'yoga/Yoga.h' file not found
+#import <yoga/Yoga.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Profiler/RCTProfileTrampoline-x86_64.S:10:10: fatal error: 'RCTDefines.h' file not found
+#include "RCTDefines.h"
+         ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTEventEmitter.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTEventEmitter.h:10:
+/root/theos/include/iphone/React/RCTBridge.h:13:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTJavaScriptLoader.mm:14:9: fatal error: 'cxxreact/JSBundleType.h' file not found
+#import <cxxreact/JSBundleType.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Profiler/RCTPerfMonitor.m:10:9: fatal error: 'RCTDefines.h' file not found
+#import "RCTDefines.h"
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Profiler/RCTProfileTrampoline-arm64.S:10:10: fatal error: 'RCTDefines.h' file not found
+#include "RCTDefines.h"
+         ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Profiler/RCTProfileTrampoline-i386.S:10:10: fatal error: 'RCTDefines.h' file not found
+#include "RCTDefines.h"
+         ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTFont.mm:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTFont.h:12:
+/root/theos/include/iphone/React/RCTConvert.h:19:9: fatal error: 'yoga/Yoga.h' file not found
+#import <yoga/Yoga.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTScrollViewManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTScrollViewManager.h:10:
+/root/theos/include/iphone/React/RCTConvert.h:19:9: fatal error: 'yoga/Yoga.h' file not found
+#import <yoga/Yoga.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTTabBarManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTTabBarManager.h:10:
+/root/theos/include/iphone/React/RCTViewManager.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/JSCSamplingProfiler.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/JSCSamplingProfiler.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTWrapperViewController.m:14:9: fatal error: 'RCTEventDispatcher.h' file not found
+#import "RCTEventDispatcher.h"
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTScrollView.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTScrollView.h:13:
+In file included from /root/theos/include/iphone/React/RCTEventDispatcher.h:12:
+/root/theos/include/iphone/React/RCTBridge.h:13:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTAccessibilityManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTAccessibilityManager.h:12:
+/root/theos/include/iphone/React/RCTBridge.h:13:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Executors/RCTJSCErrorHandling.mm:12:9: fatal error: 'jschelpers/JavaScriptCore.h' file not found
+#import <jschelpers/JavaScriptCore.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTDevLoadingView.m:12:9: fatal error: 'RCTBridge.h' file not found
+#import "RCTBridge.h"
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTTiming.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTTiming.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTAppState.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTAppState.h:10:
+In file included from /root/theos/include/iphone/React/RCTEventEmitter.h:10:
+/root/theos/include/iphone/React/RCTBridge.h:13:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Executors/RCTJSCExecutor.mm:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Executors/RCTJSCExecutor.h:12:
+/root/theos/include/iphone/React/RCTJavaScriptExecutor.h:14:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTBatchedBridge.m:13:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTBridge+Private.h:10:
+/root/theos/include/iphone/React/RCTBridge.h:13:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/UIView+React.m:14:9: fatal error: 'RCTAssert.h' file not found
+#import "RCTAssert.h"
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTSliderManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTSliderManager.h:10:
+/root/theos/include/iphone/React/RCTViewManager.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTClipboard.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTClipboard.h:10:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTModuleData.mm:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTModuleData.h:69:1: error: property with 'retain (or strong)' attribute must be of object type
+@property (nonatomic, strong, readonly) dispatch_queue_t methodQueue;
+^
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTModuleData.mm:14:10: fatal error: 'mutex' file not found
+#include <mutex>
+         ^
+2 errors generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTPerformanceLogger.m:13:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTRootView.h:12:
+/root/theos/include/iphone/React/RCTBridge.h:13:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTTouchHandler.m:15:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTBridge.h:13:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTLog.mm:13:
+/root/theos/sdks/iPhoneOS9.2.sdk/usr/include/cxxabi.h:173:1: error: unknown type name 'namespace'
+namespace abi = __cxxabiv1;
+^
+/root/theos/sdks/iPhoneOS9.2.sdk/usr/include/cxxabi.h:173:17: error: use of undeclared identifier '__cxxabiv1'
+namespace abi = __cxxabiv1;
+                ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTLog.mm:16:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTBridge+Private.h:10:
+/root/theos/include/iphone/React/RCTBridge.h:13:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+3 errors generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTNavItemManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTNavItemManager.h:10:
+/root/theos/include/iphone/React/RCTConvert.h:19:9: fatal error: 'yoga/Yoga.h' file not found
+#import <yoga/Yoga.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:21:1: error: duplicate interface definition for class 'RCTView'
+@interface RCTView : UIView
+^
+/root/theos/include/iphone/React/RCTView.h:21:12: note: previous definition is here
+@interface RCTView : UIView
+           ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:26:49: error: property has a previous declaration
+@property (nonatomic, copy) RCTDirectEventBlock onAccessibilityTap;
+                                                ^
+/root/theos/include/iphone/React/RCTView.h:26:49: note: property declared here
+@property (nonatomic, copy) RCTDirectEventBlock onAccessibilityTap;
+                                                ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:27:49: error: property has a previous declaration
+@property (nonatomic, copy) RCTDirectEventBlock onMagicTap;
+                                                ^
+/root/theos/include/iphone/React/RCTView.h:27:49: note: property declared here
+@property (nonatomic, copy) RCTDirectEventBlock onMagicTap;
+                                                ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:32:48: error: property has a previous declaration
+@property (nonatomic, assign) RCTPointerEvents pointerEvents;
+                                               ^
+/root/theos/include/iphone/React/RCTView.h:32:48: note: property declared here
+@property (nonatomic, assign) RCTPointerEvents pointerEvents;
+                                               ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:48:41: error: property has a previous declaration
+@property (nonatomic, assign) NSInteger reactZIndex;
+                                        ^
+/root/theos/include/iphone/React/RCTView.h:48:41: note: property declared here
+@property (nonatomic, assign) NSInteger reactZIndex;
+                                        ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:57:36: error: property has a previous declaration
+@property (nonatomic, assign) BOOL removeClippedSubviews;
+                                   ^
+/root/theos/include/iphone/React/RCTView.h:57:36: note: property declared here
+@property (nonatomic, assign) BOOL removeClippedSubviews;
+                                   ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:70:39: error: property has a previous declaration
+@property (nonatomic, assign) CGFloat borderRadius;
+                                      ^
+/root/theos/include/iphone/React/RCTView.h:70:39: note: property declared here
+@property (nonatomic, assign) CGFloat borderRadius;
+                                      ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:71:39: error: property has a previous declaration
+@property (nonatomic, assign) CGFloat borderTopLeftRadius;
+                                      ^
+/root/theos/include/iphone/React/RCTView.h:71:39: note: property declared here
+@property (nonatomic, assign) CGFloat borderTopLeftRadius;
+                                      ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:72:39: error: property has a previous declaration
+@property (nonatomic, assign) CGFloat borderTopRightRadius;
+                                      ^
+/root/theos/include/iphone/React/RCTView.h:72:39: note: property declared here
+@property (nonatomic, assign) CGFloat borderTopRightRadius;
+                                      ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:73:39: error: property has a previous declaration
+@property (nonatomic, assign) CGFloat borderBottomLeftRadius;
+                                      ^
+/root/theos/include/iphone/React/RCTView.h:73:39: note: property declared here
+@property (nonatomic, assign) CGFloat borderBottomLeftRadius;
+                                      ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:74:39: error: property has a previous declaration
+@property (nonatomic, assign) CGFloat borderBottomRightRadius;
+                                      ^
+/root/theos/include/iphone/React/RCTView.h:74:39: note: property declared here
+@property (nonatomic, assign) CGFloat borderBottomRightRadius;
+                                      ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:79:42: error: property has a previous declaration
+@property (nonatomic, assign) CGColorRef borderTopColor;
+                                         ^
+/root/theos/include/iphone/React/RCTView.h:79:42: note: property declared here
+@property (nonatomic, assign) CGColorRef borderTopColor;
+                                         ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:80:42: error: property has a previous declaration
+@property (nonatomic, assign) CGColorRef borderRightColor;
+                                         ^
+/root/theos/include/iphone/React/RCTView.h:80:42: note: property declared here
+@property (nonatomic, assign) CGColorRef borderRightColor;
+                                         ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:81:42: error: property has a previous declaration
+@property (nonatomic, assign) CGColorRef borderBottomColor;
+                                         ^
+/root/theos/include/iphone/React/RCTView.h:81:42: note: property declared here
+@property (nonatomic, assign) CGColorRef borderBottomColor;
+                                         ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:82:42: error: property has a previous declaration
+@property (nonatomic, assign) CGColorRef borderLeftColor;
+                                         ^
+/root/theos/include/iphone/React/RCTView.h:82:42: note: property declared here
+@property (nonatomic, assign) CGColorRef borderLeftColor;
+                                         ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:83:42: error: property has a previous declaration
+@property (nonatomic, assign) CGColorRef borderColor;
+                                         ^
+/root/theos/include/iphone/React/RCTView.h:83:42: note: property declared here
+@property (nonatomic, assign) CGColorRef borderColor;
+                                         ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:88:39: error: property has a previous declaration
+@property (nonatomic, assign) CGFloat borderTopWidth;
+                                      ^
+/root/theos/include/iphone/React/RCTView.h:88:39: note: property declared here
+@property (nonatomic, assign) CGFloat borderTopWidth;
+                                      ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:89:39: error: property has a previous declaration
+@property (nonatomic, assign) CGFloat borderRightWidth;
+                                      ^
+/root/theos/include/iphone/React/RCTView.h:89:39: note: property declared here
+@property (nonatomic, assign) CGFloat borderRightWidth;
+                                      ^
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTView.h:90:39: error: property has a previous declaration
+@property (nonatomic, assign) CGFloat borderBottomWidth;
+                                      ^
+/root/theos/include/iphone/React/RCTView.h:90:39: note: property declared here
+@property (nonatomic, assign) CGFloat borderBottomWidth;
+                                      ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTPlatform.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTPlatform.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTKeyboardObserver.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTKeyboardObserver.h:10:
+In file included from /root/theos/include/iphone/React/RCTEventEmitter.h:10:
+/root/theos/include/iphone/React/RCTBridge.h:13:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTI18nManager.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTI18nManager.h:10:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTConvert+CoreLocation.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTConvert+CoreLocation.h:12:
+/root/theos/include/iphone/React/RCTConvert.h:19:9: fatal error: 'yoga/Yoga.h' file not found
+#import <yoga/Yoga.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTTabBarItemManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTTabBarItemManager.h:10:
+/root/theos/include/iphone/React/RCTViewManager.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTKeyCommands.m:368:49: warning: unused parameter 'input' [-Wunused-parameter]
+- (void)registerKeyCommandWithInput:(NSString *)input
+                                                ^
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTKeyCommands.m:369:57: warning: unused parameter 'flags' [-Wunused-parameter]
+                      modifierFlags:(UIKeyModifierFlags)flags
+                                                        ^
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTKeyCommands.m:370:63: warning: unused parameter 'block' [-Wunused-parameter]
+                             action:(void (^)(UIKeyCommand *))block {}
+                                                              ^
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTKeyCommands.m:372:51: warning: unused parameter 'input' [-Wunused-parameter]
+- (void)unregisterKeyCommandWithInput:(NSString *)input
+                                                  ^
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTKeyCommands.m:373:59: warning: unused parameter 'flags' [-Wunused-parameter]
+                        modifierFlags:(UIKeyModifierFlags)flags {}
+                                                          ^
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTKeyCommands.m:375:52: warning: unused parameter 'input' [-Wunused-parameter]
+- (BOOL)isKeyCommandRegisteredForInput:(NSString *)input
+                                                   ^
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTKeyCommands.m:376:60: warning: unused parameter 'flags' [-Wunused-parameter]
+                         modifierFlags:(UIKeyModifierFlags)flags
+                                                           ^
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTKeyCommands.m:381:60: warning: unused parameter 'input' [-Wunused-parameter]
+- (void)registerDoublePressKeyCommandWithInput:(NSString *)input
+                                                           ^
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTKeyCommands.m:382:57: warning: unused parameter 'flags' [-Wunused-parameter]
+                      modifierFlags:(UIKeyModifierFlags)flags
+                                                        ^
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTKeyCommands.m:383:63: warning: unused parameter 'block' [-Wunused-parameter]
+                             action:(void (^)(UIKeyCommand *))block {}
+                                                              ^
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTKeyCommands.m:385:62: warning: unused parameter 'input' [-Wunused-parameter]
+- (void)unregisterDoublePressKeyCommandWithInput:(NSString *)input
+                                                             ^
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTKeyCommands.m:386:59: warning: unused parameter 'flags' [-Wunused-parameter]
+                        modifierFlags:(UIKeyModifierFlags)flags {}
+                                                          ^
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTKeyCommands.m:388:63: warning: unused parameter 'input' [-Wunused-parameter]
+- (BOOL)isDoublePressKeyCommandRegisteredForInput:(NSString *)input
+                                                              ^
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTKeyCommands.m:389:60: warning: unused parameter 'flags' [-Wunused-parameter]
+                         modifierFlags:(UIKeyModifierFlags)flags
+                                                           ^
+14 warnings generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTMapManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTMapManager.h:10:
+/root/theos/include/iphone/React/RCTViewManager.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTRefreshControl.m:12:9: fatal error: 'RCTUtils.h' file not found
+#import "RCTUtils.h"
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTWebView.m:15:9: fatal error: 'RCTConvert.h' file not found
+#import "RCTConvert.h"
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTBridge.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTBridge.h:13:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTWebViewManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTWebViewManager.h:10:
+/root/theos/include/iphone/React/RCTViewManager.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTPicker.m:12:9: fatal error: 'RCTConvert.h' file not found
+#import "RCTConvert.h"
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTTabBarItem.m:12:9: fatal error: 'RCTConvert.h' file not found
+#import "RCTConvert.h"
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTModalHostView.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTModalHostView.h:13:
+In file included from /root/theos/include/iphone/React/RCTModalHostViewManager.h:11:
+/root/theos/include/iphone/React/RCTViewManager.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTShadowView.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTShadowView.h:13:
+In file included from /root/theos/include/iphone/React/RCTRootView.h:12:
+/root/theos/include/iphone/React/RCTBridge.h:13:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Profiler/RCTProfileTrampoline-arm.S:10:10: fatal error: 'RCTDefines.h' file not found
+#include "RCTDefines.h"
+         ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTSegmentedControlManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTSegmentedControlManager.h:10:
+/root/theos/include/iphone/React/RCTViewManager.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTPickerManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTPickerManager.h:10:
+/root/theos/include/iphone/React/RCTViewManager.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTRefreshControlManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTRefreshControlManager.h:10:
+/root/theos/include/iphone/React/RCTViewManager.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTBundleURLProvider.m:12:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTConvert.h:19:9: fatal error: 'yoga/Yoga.h' file not found
+#import <yoga/Yoga.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTNavigator.m:12:9: fatal error: 'RCTAssert.h' file not found
+#import "RCTAssert.h"
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTTabBar.m:12:9: fatal error: 'RCTEventDispatcher.h' file not found
+#import "RCTEventDispatcher.h"
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTRedBox.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTRedBox.h:12:
+/root/theos/include/iphone/React/RCTBridge.h:13:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTModalHostViewController.m:12:9: fatal error: 'RCTLog.h' file not found
+#import "RCTLog.h"
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTMap.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTMap.h:14:
+In file included from /root/theos/include/iphone/React/RCTConvert+MapKit.h:12:
+/root/theos/include/iphone/React/RCTConvert.h:19:9: fatal error: 'yoga/Yoga.h' file not found
+#import <yoga/Yoga.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTEventDispatcher.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTEventDispatcher.h:12:
+/root/theos/include/iphone/React/RCTBridge.h:13:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTModalHostViewManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTModalHostViewManager.h:11:
+/root/theos/include/iphone/React/RCTViewManager.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTUIManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Modules/RCTUIManager.h:12:
+/root/theos/include/iphone/React/RCTBridge.h:13:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTTouchEvent.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Base/RCTTouchEvent.h:12:
+In file included from /root/theos/include/iphone/React/RCTEventDispatcher.h:12:
+/root/theos/include/iphone/React/RCTBridge.h:13:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Profiler/RCTProfile.m:20:9: fatal error: 'RCTAssert.h' file not found
+#import "RCTAssert.h"
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTConvert+Transform.m:10:
+/mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTConvert+Transform.h:10:9: fatal error: 'RCTConvert.h' file not found
+#import "RCTConvert.h"
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTComponentData.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTComponentData.h:14:
+/root/theos/include/iphone/React/RCTViewManager.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTNavigatorManager.m:10:
+In file included from /mnt/c/Dev/XcodeProjectDumper/node_modules/react-native/React/Views/RCTNavigatorManager.h:10:
+/root/theos/include/iphone/React/RCTViewManager.h:12:9: fatal error: 'React/RCTBridgeModule.h' file not found
+#import <React/RCTBridgeModule.h>
+        ^
+1 error generated.
+makefiles/React.mk:64: recipe for target 'libReact.a' failed
+make: *** [libReact.a] Error 1

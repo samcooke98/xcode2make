@@ -16,3 +16,7 @@ dstSubfolderSpec property value used in a PBXCopyFilesBuildPhase object.
  : 13,                     # PlugIns
 
  http://stackoverflow.com/questions/19156490/xcode-copy-files-build-phase-what-do-the-destination-options-mean-exactly
+
+ http://www.monobjc.net/xcode-project-file-format.html
+
+ https://pewpewthespells.com/blog/buildsettings.html

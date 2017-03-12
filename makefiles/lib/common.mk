@@ -1,11 +1,19 @@
 
 # Path to toolchain
-COMPILER = $(THEOS)/toolchain/linux/iphone/bin/armv7-apple-darwin11-clang++
+COMPILER = $(THEOS)/toolchain/linux/iphone/bin/armv7-apple-darwin11-clang
+
+CC_COMPILER = $(THEOS)/toolchain/linux/iphone/bin/armv7-apple-darwin11-clang
+CXX_COMPILER = $(THEOS)/toolchain/linux/iphone/bin/armv7-apple-darwin11-clang++
+
+
 LINKER = $(THEOS)/toolchain/linux/iphone/bin/armv7-apple-darwin11-libtool
 
 
 #Output directory
 OUTPUT_DIR = ./build
+
+INTERMEDIATE_DIR = $(OUTPUT_DIR)/intermediate/
+INCLUDE_BUILD_HEADERS = $(INTERMEDIATE_DIR)/include/
 
 
 #Architecture to compile for 
@@ -28,7 +36,7 @@ REACT-NATIVE := $(abspath $(REACT-NATIVE))
 ###### Compiler Settings #######
 
 #Basic Flags
-COMPILER_FLAGS = -x objective-c -isysroot "/root/theos/sdks/iPhoneOS9.2.sdk" -std=gnu99 -fobjc-arc -Os -g -fmodules -Wextra -Wall
+COMPILER_FLAGS = -isysroot "/root/theos/sdks/iPhoneOS9.2.sdk" -std=c++14 -fobjc-arc -Os -g -fmodules -Wextra -Wall
 
 #Warning Flags
 COMPILER_FLAGS += -Wno-sign-conversion -Wno-infinite-recursion -Wno-missing-field-initializers -Wno-missing-prototypes      -Werror=return-type -Wunreachable-code -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wmissing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -Wnon-modular-include-in-framework-module -Werror=non-modular-include-in-framework-module -Wno-trigraphs -Wprotocol -Wdeprecated-declarations -Wextra -Wall
@@ -42,9 +50,10 @@ COMPILER_FLAGS += -fpascal-strings -fobjc-abi-version=2 -fobjc-legacy-dispatch
 #Basic Include Directories: 
 COMPILER_INCLUDE += -I/root/theos/include/iphone/ -I/root/theos/include/ -I/root/theos/vendor/include -I/root/theos/include/_fallback
 
+THEOS_INCLUDES = -I/root/theos/include/iphone/ -I/root/theos/include/ -I/root/theos/vendor/include -I/root/theos/include/_fallback -isysroot "/root/theos/sdks/iPhoneOS9.2.sdk"
 #Add React Native includes
 COMPILER_INCLUDE += -I$(REACT-NATIVE)/ReactCommon/yoga/ -I$(REACT-NATIVE)/React -I$(REACT-NATIVE)/React/Base -I$(REACT-NATIVE)/CSSLayout
-
+COMPILER_INCLUDE += -I$(INCLUDE_BUILD_HEADERS)
 
 
 #Linker Settings
@@ -69,7 +78,7 @@ L_OUTPUT_DIR = ./build/final
 
 
 
-COMPILER_FLAGS += -v 
+COMPILER_ALL_FLAGS =  $(COMPILER_FLAGS) $(COMPILER_INCLUDE) -arch $(ARCH)
 
 #Add search directories for include " " 
 # COMPILER_INCLUDE += -iquote $(abspath ../node_modules/react-native/Libraries/ART/) -iquote $(sort $(dir $(wildcard ../node_modules/react-native/Libraries/ART/*/)))
@@ -82,7 +91,7 @@ COMPILER_FLAGS += -v
 build: 
 	mkdir -p $(OBJS_DIR)
 
-	cd $(OBJS_DIR);  $(COMPILER) $(COMPILER_FLAGS) $(COMPILER_INCLUDE) $(QUOTE_INCLUDES) -arch $(ARCH) -c $(SOURCES)
+	cd $(OBJS_DIR);  $(COMPILER) $(QUOTE_INCLUDES)  -c $(SOURCES)
 	
 L_INPUT := $(wildcard $(OBJS_DIR)/*.o)
 

@@ -1,6 +1,10 @@
 Dump/
 to-dump/
 makefiles/
+build/ 
+
+
+.vscode/
 
 #Standard Node GitIgnore from GItignore
 # Logs
