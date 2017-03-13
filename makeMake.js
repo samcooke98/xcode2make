@@ -216,7 +216,7 @@ var masterMake = '';
 function generateMakefile(makeInfo, projObj) {
     var targetName = makeInfo.name; //ie: libRCTGeolocation
     var product = makeInfo.product; //ie: libRCTGeolocation.a
-   
+
     //This will contain variable definitions
     var startOfFile = '';
     //This will contain the shell steps to build the file. 
@@ -251,20 +251,16 @@ function generateMakefile(makeInfo, projObj) {
     var varForCObjects = `${targetName.toUpperCase()}_C_OBJS`;
     var varForCXXObjects = `${targetName.toUpperCase()}_CXX_OBJS`;
     var varForObjCObjects = `${targetName.toUpperCase()}_OBJC_OBJS`;
-    var varForAllObjects = `${targetName.toUpperCase()}_ALL_OBJS`
+    var varForAllObjects = `${targetName.toUpperCase()}_ALL_OBJS`;
+
     //Source File Variables
     var varForCFiles = `${targetName.toUpperCase()}_C_FILES`;
     var varForCXXFiles = `${targetName.toUpperCase()}_CXX_FILES`;
     var varForObjCFiles = `${targetName.toUpperCase()}_OBJC_FILES`;
 
-    
+
     //Recipe to make the object directory
     recipes += `$(${varForObj_Dir}): \n\tmkdir -p $(${varForObj_Dir}) \n`
-
-    //TODO: 
-    //Define the Source File Variables and Objects
-
-
 
 
     //Define the Object directory
@@ -275,7 +271,7 @@ function generateMakefile(makeInfo, projObj) {
     if (makeInfo.depends) {
         //If there are depenedencies add them to the pre-reqs
         prerequisites += `$(${varForFramework})`
-        
+
         //Define the variable 
         var str = '';
         for (fileObj of makeInfo.depends) {
@@ -290,11 +286,17 @@ function generateMakefile(makeInfo, projObj) {
     var { compilerSettings, c_compilerSettings, linkerSettings } = lib.mapCompilerSettings(makeInfo.buildConfig);
     console.warn(util.inspect(lib.ignoredWhenMapping, true, null));
 
+    //TODO: Add to the ".." search paths 
+    var result = lib.getIncludeFolders(projObj)
+    for (obj of result) {
+        var folderPath = getRootProjFolder(makeInfo) + obj.path;
+        c_compilerSettings += " -iquote " + folderPath;
+        compilerSettings += " -iquote " + folderPath;
+    }
+    c_compilerSettings += " -iquote " + getRootProjFolder(makeInfo);
+
     startOfFile += `${varForCompilerFlags} = ${compilerSettings}\n${varForLinkerFlags} = ${linkerSettings}\n`
     startOfFile += `${varForC_CompilerFlags} = ${c_compilerSettings}\n`
-
-
-
 
     /* Generate the step for headers, if necessary */
     if (makeInfo.copyHeaders != undefined) {
@@ -365,7 +367,7 @@ function generateMakefile(makeInfo, projObj) {
     buildSteps += `$(LINKER) $(FRAMEWORKS) $(LINKER_FLAGS) -o $(L_OUTPUT_DIR)/${product} $(wildcard $(${varForObj_Dir})/*.o)\n\t`
 
 
-    data = startOfFile + "\n" + CopyHeaderRule + "\n" + recipes + "\n" + buildSteps;
+    data = `all: ${product}\n\n` + startOfFile + "\n" + CopyHeaderRule + "\n" + recipes + "\n" + buildSteps;
 
     return data;
 }
@@ -464,25 +466,25 @@ function getRootProjFolder(makeInfo) {
 
 
 start("./node_modules/react-native/Libraries/ART/ART.xcodeproj/project.pbxproj")
-start("./node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj/project.pbxproj")
-start("./node_modules/react-native/Libraries/AdSupport/RCTAdSupport.xcodeproj/project.pbxproj");
-start("./node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj/project.pbxproj");
-start("./node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj/project.pbxproj");
-start("./node_modules/react-native/Libraries/Text/RCTText.xcodeproj/project.pbxproj");
-start("./node_modules/react-native/Libraries/Settings/RCTsettings.xcodeproj/project.pbxproj");
-start("./node_modules/react-native/Libraries/Sample/Sample.xcodeproj/project.pbxproj");
-start("./node_modules/react-native/Libraries/RCTTest/RCTTest.xcodeproj/project.pbxproj");
-start("./node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj/project.pbxproj");
-start("./node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj/project.pbxproj");
-start("./node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj/project.pbxproj");
-start("./node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj/project.pbxproj");
-start("./node_modules/react-native/Libraries/Image/RCTImage.xcodeproj/project.pbxproj");
-start("./node_modules/react-native/Libraries/Geolocation/RCTGeolocation.xcodeproj/project.pbxproj");
-start("./node_modules/react-native/Libraries/CameraRoll/RCTCameraRoll.xcodeproj/project.pbxproj");
+// start("./node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj/project.pbxproj")
+// start("./node_modules/react-native/Libraries/AdSupport/RCTAdSupport.xcodeproj/project.pbxproj");
+// start("./node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj/project.pbxproj");
+// start("./node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj/project.pbxproj");
+// start("./node_modules/react-native/Libraries/Text/RCTText.xcodeproj/project.pbxproj");
+// start("./node_modules/react-native/Libraries/Settings/RCTsettings.xcodeproj/project.pbxproj");
+// start("./node_modules/react-native/Libraries/Sample/Sample.xcodeproj/project.pbxproj");
+// start("./node_modules/react-native/Libraries/RCTTest/RCTTest.xcodeproj/project.pbxproj");
+// start("./node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj/project.pbxproj");
+// start("./node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj/project.pbxproj");
+// start("./node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj/project.pbxproj");
+// start("./node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj/project.pbxproj");
+// start("./node_modules/react-native/Libraries/Image/RCTImage.xcodeproj/project.pbxproj");
+// start("./node_modules/react-native/Libraries/Geolocation/RCTGeolocation.xcodeproj/project.pbxproj");
+// start("./node_modules/react-native/Libraries/CameraRoll/RCTCameraRoll.xcodeproj/project.pbxproj");
 
 
-start("./node_modules/react-native/React/React.xcodeproj/project.pbxproj")
-start("../RoosterSecond/ios/RoosterSecond.xcodeproj/project.pbxproj")
+// start("./node_modules/react-native/React/React.xcodeproj/project.pbxproj")
+// start("../RoosterSecond/ios/RoosterSecond.xcodeproj/project.pbxproj")
 
 function start(pathToProject) {
     var info = lib.dump(pathToProject);

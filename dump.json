@@ -1,501 +1,361 @@
 {
 	"files": {
-		"008F07F21AC5B25A0029DE68": {
+		"0CF68AC11AF0540F00FF9E5C": {
 			"isa": "PBXFileReference",
-			"fileEncoding": 4,
-			"lastKnownFileType": "text",
-			"path": "main.jsbundle",
-			"sourceTree": "\"<group>\""
-		},
-		"008F07F21AC5B25A0029DE68_comment": "main.jsbundle",
-		"00C302A71ABCB8CE00DB3ED1": {
-			"isa": "PBXFileReference",
-			"lastKnownFileType": "\"wrapper.pb-project\"",
-			"name": "RCTActionSheet.xcodeproj",
-			"path": "\"../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj\"",
-			"sourceTree": "\"<group>\""
-		},
-		"00C302A71ABCB8CE00DB3ED1_comment": "RCTActionSheet.xcodeproj",
-		"00C302B51ABCB90400DB3ED1": {
-			"isa": "PBXFileReference",
-			"lastKnownFileType": "\"wrapper.pb-project\"",
-			"name": "RCTGeolocation.xcodeproj",
-			"path": "\"../node_modules/react-native/Libraries/Geolocation/RCTGeolocation.xcodeproj\"",
-			"sourceTree": "\"<group>\""
-		},
-		"00C302B51ABCB90400DB3ED1_comment": "RCTGeolocation.xcodeproj",
-		"00C302BB1ABCB91800DB3ED1": {
-			"isa": "PBXFileReference",
-			"lastKnownFileType": "\"wrapper.pb-project\"",
-			"name": "RCTImage.xcodeproj",
-			"path": "\"../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj\"",
-			"sourceTree": "\"<group>\""
-		},
-		"00C302BB1ABCB91800DB3ED1_comment": "RCTImage.xcodeproj",
-		"00C302D31ABCB9D200DB3ED1": {
-			"isa": "PBXFileReference",
-			"lastKnownFileType": "\"wrapper.pb-project\"",
-			"name": "RCTNetwork.xcodeproj",
-			"path": "\"../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj\"",
-			"sourceTree": "\"<group>\""
-		},
-		"00C302D31ABCB9D200DB3ED1_comment": "RCTNetwork.xcodeproj",
-		"00C302DF1ABCB9EE00DB3ED1": {
-			"isa": "PBXFileReference",
-			"lastKnownFileType": "\"wrapper.pb-project\"",
-			"name": "RCTVibration.xcodeproj",
-			"path": "\"../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj\"",
-			"sourceTree": "\"<group>\""
-		},
-		"00C302DF1ABCB9EE00DB3ED1_comment": "RCTVibration.xcodeproj",
-		"00E356EE1AD99517003FC87E": {
-			"isa": "PBXFileReference",
-			"explicitFileType": "wrapper.cfbundle",
+			"explicitFileType": "archive.ar",
 			"includeInIndex": 0,
-			"path": "RoosterSecondTests.xctest",
+			"path": "libART.a",
 			"sourceTree": "BUILT_PRODUCTS_DIR"
 		},
-		"00E356EE1AD99517003FC87E_comment": "RoosterSecondTests.xctest",
-		"00E356F11AD99517003FC87E": {
-			"isa": "PBXFileReference",
-			"lastKnownFileType": "text.plist.xml",
-			"path": "Info.plist",
-			"sourceTree": "\"<group>\""
-		},
-		"00E356F11AD99517003FC87E_comment": "Info.plist",
-		"00E356F21AD99517003FC87E": {
-			"isa": "PBXFileReference",
-			"lastKnownFileType": "sourcecode.c.objc",
-			"path": "RoosterSecondTests.m",
-			"sourceTree": "\"<group>\""
-		},
-		"00E356F21AD99517003FC87E_comment": "RoosterSecondTests.m",
-		"139105B61AF99BAD00B5F7CC": {
-			"isa": "PBXFileReference",
-			"lastKnownFileType": "\"wrapper.pb-project\"",
-			"name": "RCTSettings.xcodeproj",
-			"path": "\"../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj\"",
-			"sourceTree": "\"<group>\""
-		},
-		"139105B61AF99BAD00B5F7CC_comment": "RCTSettings.xcodeproj",
-		"139FDEE61B06529A00C62182": {
-			"isa": "PBXFileReference",
-			"lastKnownFileType": "\"wrapper.pb-project\"",
-			"name": "RCTWebSocket.xcodeproj",
-			"path": "\"../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj\"",
-			"sourceTree": "\"<group>\""
-		},
-		"139FDEE61B06529A00C62182_comment": "RCTWebSocket.xcodeproj",
-		"13B07F961A680F5B00A75B9A": {
-			"isa": "PBXFileReference",
-			"explicitFileType": "wrapper.application",
-			"includeInIndex": 0,
-			"path": "RoosterSecond.app",
-			"sourceTree": "BUILT_PRODUCTS_DIR"
-		},
-		"13B07F961A680F5B00A75B9A_comment": "RoosterSecond.app",
-		"13B07FAF1A68108700A75B9A": {
+		"0CF68AC11AF0540F00FF9E5C_comment": "libART.a",
+		"0CF68ADB1AF0549300FF9E5C": {
 			"isa": "PBXFileReference",
 			"fileEncoding": 4,
 			"lastKnownFileType": "sourcecode.c.h",
-			"name": "AppDelegate.h",
-			"path": "RoosterSecond/AppDelegate.h",
+			"path": "ARTCGFloatArray.h",
 			"sourceTree": "\"<group>\""
 		},
-		"13B07FAF1A68108700A75B9A_comment": "AppDelegate.h",
-		"13B07FB01A68108700A75B9A": {
+		"0CF68ADB1AF0549300FF9E5C_comment": "ARTCGFloatArray.h",
+		"0CF68ADC1AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTContainer.h",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68ADC1AF0549300FF9E5C_comment": "ARTContainer.h",
+		"0CF68ADD1AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTGroup.h",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68ADD1AF0549300FF9E5C_comment": "ARTGroup.h",
+		"0CF68ADE1AF0549300FF9E5C": {
 			"isa": "PBXFileReference",
 			"fileEncoding": 4,
 			"lastKnownFileType": "sourcecode.c.objc",
-			"name": "AppDelegate.m",
-			"path": "RoosterSecond/AppDelegate.m",
+			"path": "ARTGroup.m",
 			"sourceTree": "\"<group>\""
 		},
-		"13B07FB01A68108700A75B9A_comment": "AppDelegate.m",
-		"13B07FB21A68108700A75B9A": {
-			"isa": "PBXFileReference",
-			"lastKnownFileType": "file.xib",
-			"name": "Base",
-			"path": "Base.lproj/LaunchScreen.xib",
-			"sourceTree": "\"<group>\""
-		},
-		"13B07FB21A68108700A75B9A_comment": "Base",
-		"13B07FB51A68108700A75B9A": {
-			"isa": "PBXFileReference",
-			"lastKnownFileType": "folder.assetcatalog",
-			"name": "Images.xcassets",
-			"path": "RoosterSecond/Images.xcassets",
-			"sourceTree": "\"<group>\""
-		},
-		"13B07FB51A68108700A75B9A_comment": "Images.xcassets",
-		"13B07FB61A68108700A75B9A": {
+		"0CF68ADE1AF0549300FF9E5C_comment": "ARTGroup.m",
+		"0CF68ADF1AF0549300FF9E5C": {
 			"isa": "PBXFileReference",
 			"fileEncoding": 4,
-			"lastKnownFileType": "text.plist.xml",
-			"name": "Info.plist",
-			"path": "RoosterSecond/Info.plist",
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTNode.h",
 			"sourceTree": "\"<group>\""
 		},
-		"13B07FB61A68108700A75B9A_comment": "Info.plist",
-		"13B07FB71A68108700A75B9A": {
+		"0CF68ADF1AF0549300FF9E5C_comment": "ARTNode.h",
+		"0CF68AE01AF0549300FF9E5C": {
 			"isa": "PBXFileReference",
 			"fileEncoding": 4,
 			"lastKnownFileType": "sourcecode.c.objc",
-			"name": "main.m",
-			"path": "RoosterSecond/main.m",
+			"path": "ARTNode.m",
 			"sourceTree": "\"<group>\""
 		},
-		"13B07FB71A68108700A75B9A_comment": "main.m",
-		"146833FF1AC3E56700842450": {
+		"0CF68AE01AF0549300FF9E5C_comment": "ARTNode.m",
+		"0CF68AE11AF0549300FF9E5C": {
 			"isa": "PBXFileReference",
-			"lastKnownFileType": "\"wrapper.pb-project\"",
-			"name": "React.xcodeproj",
-			"path": "\"../node_modules/react-native/React/React.xcodeproj\"",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTRenderable.h",
 			"sourceTree": "\"<group>\""
 		},
-		"146833FF1AC3E56700842450_comment": "React.xcodeproj",
-		"2D02E47B1E0B4A5D006451C7": {
+		"0CF68AE11AF0549300FF9E5C_comment": "ARTRenderable.h",
+		"0CF68AE21AF0549300FF9E5C": {
 			"isa": "PBXFileReference",
-			"explicitFileType": "wrapper.application",
-			"includeInIndex": 0,
-			"path": "\"RoosterSecond-tvOS.app\"",
-			"sourceTree": "BUILT_PRODUCTS_DIR"
-		},
-		"2D02E47B1E0B4A5D006451C7_comment": "RoosterSecond-tvOS.app",
-		"2D02E4901E0B4A5D006451C7": {
-			"isa": "PBXFileReference",
-			"explicitFileType": "wrapper.cfbundle",
-			"includeInIndex": 0,
-			"path": "\"RoosterSecond-tvOSTests.xctest\"",
-			"sourceTree": "BUILT_PRODUCTS_DIR"
-		},
-		"2D02E4901E0B4A5D006451C7_comment": "RoosterSecond-tvOSTests.xctest",
-		"5E91572D1DD0AC6500FF2AA8": {
-			"isa": "PBXFileReference",
-			"lastKnownFileType": "\"wrapper.pb-project\"",
-			"name": "RCTAnimation.xcodeproj",
-			"path": "\"../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj\"",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.objc",
+			"path": "ARTRenderable.m",
 			"sourceTree": "\"<group>\""
 		},
-		"5E91572D1DD0AC6500FF2AA8_comment": "RCTAnimation.xcodeproj",
-		"78C398B01ACF4ADC00677621": {
+		"0CF68AE21AF0549300FF9E5C_comment": "ARTRenderable.m",
+		"0CF68AE31AF0549300FF9E5C": {
 			"isa": "PBXFileReference",
-			"lastKnownFileType": "\"wrapper.pb-project\"",
-			"name": "RCTLinking.xcodeproj",
-			"path": "\"../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj\"",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTShape.h",
 			"sourceTree": "\"<group>\""
 		},
-		"78C398B01ACF4ADC00677621_comment": "RCTLinking.xcodeproj",
-		"832341B01AAA6A8300B99B32": {
+		"0CF68AE31AF0549300FF9E5C_comment": "ARTShape.h",
+		"0CF68AE41AF0549300FF9E5C": {
 			"isa": "PBXFileReference",
-			"lastKnownFileType": "\"wrapper.pb-project\"",
-			"name": "RCTText.xcodeproj",
-			"path": "\"../node_modules/react-native/Libraries/Text/RCTText.xcodeproj\"",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.objc",
+			"path": "ARTShape.m",
 			"sourceTree": "\"<group>\""
 		},
-		"832341B01AAA6A8300B99B32_comment": "RCTText.xcodeproj"
+		"0CF68AE41AF0549300FF9E5C_comment": "ARTShape.m",
+		"0CF68AE51AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTSurfaceView.h",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AE51AF0549300FF9E5C_comment": "ARTSurfaceView.h",
+		"0CF68AE61AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.objc",
+			"path": "ARTSurfaceView.m",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AE61AF0549300FF9E5C_comment": "ARTSurfaceView.m",
+		"0CF68AE71AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTText.h",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AE71AF0549300FF9E5C_comment": "ARTText.h",
+		"0CF68AE81AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.objc",
+			"path": "ARTText.m",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AE81AF0549300FF9E5C_comment": "ARTText.m",
+		"0CF68AE91AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTTextFrame.h",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AE91AF0549300FF9E5C_comment": "ARTTextFrame.h",
+		"0CF68AEB1AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTBrush.h",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AEB1AF0549300FF9E5C_comment": "ARTBrush.h",
+		"0CF68AEC1AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.objc",
+			"path": "ARTBrush.m",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AEC1AF0549300FF9E5C_comment": "ARTBrush.m",
+		"0CF68AED1AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTLinearGradient.h",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AED1AF0549300FF9E5C_comment": "ARTLinearGradient.h",
+		"0CF68AEE1AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.objc",
+			"path": "ARTLinearGradient.m",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AEE1AF0549300FF9E5C_comment": "ARTLinearGradient.m",
+		"0CF68AEF1AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTPattern.h",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AEF1AF0549300FF9E5C_comment": "ARTPattern.h",
+		"0CF68AF01AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.objc",
+			"path": "ARTPattern.m",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AF01AF0549300FF9E5C_comment": "ARTPattern.m",
+		"0CF68AF11AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTRadialGradient.h",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AF11AF0549300FF9E5C_comment": "ARTRadialGradient.h",
+		"0CF68AF21AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.objc",
+			"path": "ARTRadialGradient.m",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AF21AF0549300FF9E5C_comment": "ARTRadialGradient.m",
+		"0CF68AF31AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTSolidColor.h",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AF31AF0549300FF9E5C_comment": "ARTSolidColor.h",
+		"0CF68AF41AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.objc",
+			"path": "ARTSolidColor.m",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AF41AF0549300FF9E5C_comment": "ARTSolidColor.m",
+		"0CF68AF61AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "\"RCTConvert+ART.h\"",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AF61AF0549300FF9E5C_comment": "RCTConvert+ART.h",
+		"0CF68AF71AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.objc",
+			"path": "\"RCTConvert+ART.m\"",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AF71AF0549300FF9E5C_comment": "RCTConvert+ART.m",
+		"0CF68AF91AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTGroupManager.h",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AF91AF0549300FF9E5C_comment": "ARTGroupManager.h",
+		"0CF68AFA1AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.objc",
+			"path": "ARTGroupManager.m",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AFA1AF0549300FF9E5C_comment": "ARTGroupManager.m",
+		"0CF68AFB1AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTNodeManager.h",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AFB1AF0549300FF9E5C_comment": "ARTNodeManager.h",
+		"0CF68AFC1AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.objc",
+			"path": "ARTNodeManager.m",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AFC1AF0549300FF9E5C_comment": "ARTNodeManager.m",
+		"0CF68AFD1AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTRenderableManager.h",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AFD1AF0549300FF9E5C_comment": "ARTRenderableManager.h",
+		"0CF68AFE1AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.objc",
+			"path": "ARTRenderableManager.m",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AFE1AF0549300FF9E5C_comment": "ARTRenderableManager.m",
+		"0CF68AFF1AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTShapeManager.h",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AFF1AF0549300FF9E5C_comment": "ARTShapeManager.h",
+		"0CF68B001AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.objc",
+			"path": "ARTShapeManager.m",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68B001AF0549300FF9E5C_comment": "ARTShapeManager.m",
+		"0CF68B011AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTSurfaceViewManager.h",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68B011AF0549300FF9E5C_comment": "ARTSurfaceViewManager.h",
+		"0CF68B021AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.objc",
+			"path": "ARTSurfaceViewManager.m",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68B021AF0549300FF9E5C_comment": "ARTSurfaceViewManager.m",
+		"0CF68B031AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.h",
+			"path": "ARTTextManager.h",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68B031AF0549300FF9E5C_comment": "ARTTextManager.h",
+		"0CF68B041AF0549300FF9E5C": {
+			"isa": "PBXFileReference",
+			"fileEncoding": 4,
+			"lastKnownFileType": "sourcecode.c.objc",
+			"path": "ARTTextManager.m",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68B041AF0549300FF9E5C_comment": "ARTTextManager.m"
 	},
 	"firstProject": {
-		"uuid": "83CBB9F71A601CBA00E9B192",
+		"uuid": "0CF68AB91AF0540F00FF9E5C",
 		"firstProject": {
 			"isa": "PBXProject",
 			"attributes": {
-				"LastUpgradeCheck": 610,
-				"ORGANIZATIONNAME": "Facebook",
+				"LastUpgradeCheck": 620,
 				"TargetAttributes": {
-					"00E356ED1AD99517003FC87E": {
-						"CreatedOnToolsVersion": "6.2",
-						"TestTargetID": "13B07F861A680F5B00A75B9A"
-					},
-					"2D02E47A1E0B4A5D006451C7": {
-						"CreatedOnToolsVersion": "8.2.1",
-						"ProvisioningStyle": "Automatic"
-					},
-					"2D02E48F1E0B4A5D006451C7": {
-						"CreatedOnToolsVersion": "8.2.1",
-						"ProvisioningStyle": "Automatic",
-						"TestTargetID": "2D02E47A1E0B4A5D006451C7"
+					"0CF68AC01AF0540F00FF9E5C": {
+						"CreatedOnToolsVersion": "6.2"
 					}
 				}
 			},
-			"buildConfigurationList": "83CBB9FA1A601CBA00E9B192",
-			"buildConfigurationList_comment": "Build configuration list for PBXProject \"RoosterSecond\"",
+			"buildConfigurationList": "0CF68ABC1AF0540F00FF9E5C",
+			"buildConfigurationList_comment": "Build configuration list for PBXProject \"ART\"",
 			"compatibilityVersion": "\"Xcode 3.2\"",
 			"developmentRegion": "English",
 			"hasScannedForEncodings": 0,
 			"knownRegions": [
-				"en",
-				"Base"
+				"en"
 			],
-			"mainGroup": "83CBB9F61A601CBA00E9B192",
-			"productRefGroup": "83CBBA001A601CBA00E9B192",
+			"mainGroup": "0CF68AB81AF0540F00FF9E5C",
+			"productRefGroup": "0CF68AC21AF0540F00FF9E5C",
 			"productRefGroup_comment": "Products",
 			"projectDirPath": "\"\"",
-			"projectReferences": [
-				{
-					"ProductGroup": "00C302A81ABCB8CE00DB3ED1",
-					"ProductGroup_comment": "Products",
-					"ProjectRef": "00C302A71ABCB8CE00DB3ED1",
-					"ProjectRef_comment": "RCTActionSheet.xcodeproj"
-				},
-				{
-					"ProductGroup": "5E91572E1DD0AC6500FF2AA8",
-					"ProductGroup_comment": "Products",
-					"ProjectRef": "5E91572D1DD0AC6500FF2AA8",
-					"ProjectRef_comment": "RCTAnimation.xcodeproj"
-				},
-				{
-					"ProductGroup": "00C302B61ABCB90400DB3ED1",
-					"ProductGroup_comment": "Products",
-					"ProjectRef": "00C302B51ABCB90400DB3ED1",
-					"ProjectRef_comment": "RCTGeolocation.xcodeproj"
-				},
-				{
-					"ProductGroup": "00C302BC1ABCB91800DB3ED1",
-					"ProductGroup_comment": "Products",
-					"ProjectRef": "00C302BB1ABCB91800DB3ED1",
-					"ProjectRef_comment": "RCTImage.xcodeproj"
-				},
-				{
-					"ProductGroup": "78C398B11ACF4ADC00677621",
-					"ProductGroup_comment": "Products",
-					"ProjectRef": "78C398B01ACF4ADC00677621",
-					"ProjectRef_comment": "RCTLinking.xcodeproj"
-				},
-				{
-					"ProductGroup": "00C302D41ABCB9D200DB3ED1",
-					"ProductGroup_comment": "Products",
-					"ProjectRef": "00C302D31ABCB9D200DB3ED1",
-					"ProjectRef_comment": "RCTNetwork.xcodeproj"
-				},
-				{
-					"ProductGroup": "139105B71AF99BAD00B5F7CC",
-					"ProductGroup_comment": "Products",
-					"ProjectRef": "139105B61AF99BAD00B5F7CC",
-					"ProjectRef_comment": "RCTSettings.xcodeproj"
-				},
-				{
-					"ProductGroup": "832341B11AAA6A8300B99B32",
-					"ProductGroup_comment": "Products",
-					"ProjectRef": "832341B01AAA6A8300B99B32",
-					"ProjectRef_comment": "RCTText.xcodeproj"
-				},
-				{
-					"ProductGroup": "00C302E01ABCB9EE00DB3ED1",
-					"ProductGroup_comment": "Products",
-					"ProjectRef": "00C302DF1ABCB9EE00DB3ED1",
-					"ProjectRef_comment": "RCTVibration.xcodeproj"
-				},
-				{
-					"ProductGroup": "139FDEE71B06529A00C62182",
-					"ProductGroup_comment": "Products",
-					"ProjectRef": "139FDEE61B06529A00C62182",
-					"ProjectRef_comment": "RCTWebSocket.xcodeproj"
-				},
-				{
-					"ProductGroup": "146834001AC3E56700842450",
-					"ProductGroup_comment": "Products",
-					"ProjectRef": "146833FF1AC3E56700842450",
-					"ProjectRef_comment": "React.xcodeproj"
-				}
-			],
 			"projectRoot": "\"\"",
 			"targets": [
 				{
-					"value": "13B07F861A680F5B00A75B9A",
-					"comment": "RoosterSecond"
-				},
-				{
-					"value": "00E356ED1AD99517003FC87E",
-					"comment": "RoosterSecondTests"
-				},
-				{
-					"value": "2D02E47A1E0B4A5D006451C7",
-					"comment": "RoosterSecond-tvOS"
-				},
-				{
-					"value": "2D02E48F1E0B4A5D006451C7",
-					"comment": "RoosterSecond-tvOSTests"
+					"value": "0CF68AC01AF0540F00FF9E5C",
+					"comment": "ART"
 				}
 			]
 		}
 	},
 	"buildConfigSection": {
-		"00E356F61AD99517003FC87E": {
-			"isa": "XCBuildConfiguration",
-			"buildSettings": {
-				"BUNDLE_LOADER": "\"$(TEST_HOST)\"",
-				"GCC_PREPROCESSOR_DEFINITIONS": [
-					"\"DEBUG=1\"",
-					"\"$(inherited)\""
-				],
-				"INFOPLIST_FILE": "RoosterSecondTests/Info.plist",
-				"IPHONEOS_DEPLOYMENT_TARGET": "8.0",
-				"LD_RUNPATH_SEARCH_PATHS": "\"$(inherited) @executable_path/Frameworks @loader_path/Frameworks\"",
-				"OTHER_LDFLAGS": [
-					"\"-ObjC\"",
-					"\"-lc++\""
-				],
-				"PRODUCT_NAME": "\"$(TARGET_NAME)\"",
-				"TEST_HOST": "\"$(BUILT_PRODUCTS_DIR)/RoosterSecond.app/RoosterSecond\""
-			},
-			"name": "Debug"
-		},
-		"00E356F61AD99517003FC87E_comment": "Debug",
-		"00E356F71AD99517003FC87E": {
-			"isa": "XCBuildConfiguration",
-			"buildSettings": {
-				"BUNDLE_LOADER": "\"$(TEST_HOST)\"",
-				"COPY_PHASE_STRIP": "NO",
-				"INFOPLIST_FILE": "RoosterSecondTests/Info.plist",
-				"IPHONEOS_DEPLOYMENT_TARGET": "8.0",
-				"LD_RUNPATH_SEARCH_PATHS": "\"$(inherited) @executable_path/Frameworks @loader_path/Frameworks\"",
-				"OTHER_LDFLAGS": [
-					"\"-ObjC\"",
-					"\"-lc++\""
-				],
-				"PRODUCT_NAME": "\"$(TARGET_NAME)\"",
-				"TEST_HOST": "\"$(BUILT_PRODUCTS_DIR)/RoosterSecond.app/RoosterSecond\""
-			},
-			"name": "Release"
-		},
-		"00E356F71AD99517003FC87E_comment": "Release",
-		"13B07F941A680F5B00A75B9A": {
-			"isa": "XCBuildConfiguration",
-			"buildSettings": {
-				"ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
-				"CURRENT_PROJECT_VERSION": 1,
-				"DEAD_CODE_STRIPPING": "NO",
-				"INFOPLIST_FILE": "RoosterSecond/Info.plist",
-				"LD_RUNPATH_SEARCH_PATHS": "\"$(inherited) @executable_path/Frameworks\"",
-				"OTHER_LDFLAGS": [
-					"\"$(inherited)\"",
-					"\"-ObjC\"",
-					"\"-lc++\""
-				],
-				"PRODUCT_NAME": "RoosterSecond",
-				"VERSIONING_SYSTEM": "\"apple-generic\""
-			},
-			"name": "Debug"
-		},
-		"13B07F941A680F5B00A75B9A_comment": "Debug",
-		"13B07F951A680F5B00A75B9A": {
-			"isa": "XCBuildConfiguration",
-			"buildSettings": {
-				"ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
-				"CURRENT_PROJECT_VERSION": 1,
-				"INFOPLIST_FILE": "RoosterSecond/Info.plist",
-				"LD_RUNPATH_SEARCH_PATHS": "\"$(inherited) @executable_path/Frameworks\"",
-				"OTHER_LDFLAGS": [
-					"\"$(inherited)\"",
-					"\"-ObjC\"",
-					"\"-lc++\""
-				],
-				"PRODUCT_NAME": "RoosterSecond",
-				"VERSIONING_SYSTEM": "\"apple-generic\""
-			},
-			"name": "Release"
-		},
-		"13B07F951A680F5B00A75B9A_comment": "Release",
-		"2D02E4971E0B4A5E006451C7": {
-			"isa": "XCBuildConfiguration",
-			"buildSettings": {
-				"ASSETCATALOG_COMPILER_APPICON_NAME": "\"App Icon & Top Shelf Image\"",
-				"ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME": "LaunchImage",
-				"CLANG_ANALYZER_NONNULL": "YES",
-				"CLANG_WARN_DOCUMENTATION_COMMENTS": "YES",
-				"CLANG_WARN_INFINITE_RECURSION": "YES",
-				"CLANG_WARN_SUSPICIOUS_MOVE": "YES",
-				"DEBUG_INFORMATION_FORMAT": "dwarf",
-				"ENABLE_TESTABILITY": "YES",
-				"GCC_NO_COMMON_BLOCKS": "YES",
-				"INFOPLIST_FILE": "\"RoosterSecond-tvOS/Info.plist\"",
-				"LD_RUNPATH_SEARCH_PATHS": "\"$(inherited) @executable_path/Frameworks\"",
-				"OTHER_LDFLAGS": [
-					"\"-ObjC\"",
-					"\"-lc++\""
-				],
-				"PRODUCT_BUNDLE_IDENTIFIER": "\"com.facebook.REACT.RoosterSecond-tvOS\"",
-				"PRODUCT_NAME": "\"$(TARGET_NAME)\"",
-				"SDKROOT": "appletvos",
-				"TARGETED_DEVICE_FAMILY": 3,
-				"TVOS_DEPLOYMENT_TARGET": "9.2"
-			},
-			"name": "Debug"
-		},
-		"2D02E4971E0B4A5E006451C7_comment": "Debug",
-		"2D02E4981E0B4A5E006451C7": {
-			"isa": "XCBuildConfiguration",
-			"buildSettings": {
-				"ASSETCATALOG_COMPILER_APPICON_NAME": "\"App Icon & Top Shelf Image\"",
-				"ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME": "LaunchImage",
-				"CLANG_ANALYZER_NONNULL": "YES",
-				"CLANG_WARN_DOCUMENTATION_COMMENTS": "YES",
-				"CLANG_WARN_INFINITE_RECURSION": "YES",
-				"CLANG_WARN_SUSPICIOUS_MOVE": "YES",
-				"COPY_PHASE_STRIP": "NO",
-				"DEBUG_INFORMATION_FORMAT": "\"dwarf-with-dsym\"",
-				"GCC_NO_COMMON_BLOCKS": "YES",
-				"INFOPLIST_FILE": "\"RoosterSecond-tvOS/Info.plist\"",
-				"LD_RUNPATH_SEARCH_PATHS": "\"$(inherited) @executable_path/Frameworks\"",
-				"OTHER_LDFLAGS": [
-					"\"-ObjC\"",
-					"\"-lc++\""
-				],
-				"PRODUCT_BUNDLE_IDENTIFIER": "\"com.facebook.REACT.RoosterSecond-tvOS\"",
-				"PRODUCT_NAME": "\"$(TARGET_NAME)\"",
-				"SDKROOT": "appletvos",
-				"TARGETED_DEVICE_FAMILY": 3,
-				"TVOS_DEPLOYMENT_TARGET": "9.2"
-			},
-			"name": "Release"
-		},
-		"2D02E4981E0B4A5E006451C7_comment": "Release",
-		"2D02E4991E0B4A5E006451C7": {
-			"isa": "XCBuildConfiguration",
-			"buildSettings": {
-				"BUNDLE_LOADER": "\"$(TEST_HOST)\"",
-				"CLANG_ANALYZER_NONNULL": "YES",
-				"CLANG_WARN_DOCUMENTATION_COMMENTS": "YES",
-				"CLANG_WARN_INFINITE_RECURSION": "YES",
-				"CLANG_WARN_SUSPICIOUS_MOVE": "YES",
-				"DEBUG_INFORMATION_FORMAT": "dwarf",
-				"ENABLE_TESTABILITY": "YES",
-				"GCC_NO_COMMON_BLOCKS": "YES",
-				"INFOPLIST_FILE": "\"RoosterSecond-tvOSTests/Info.plist\"",
-				"LD_RUNPATH_SEARCH_PATHS": "\"$(inherited) @executable_path/Frameworks @loader_path/Frameworks\"",
-				"PRODUCT_BUNDLE_IDENTIFIER": "\"com.facebook.REACT.RoosterSecond-tvOSTests\"",
-				"PRODUCT_NAME": "\"$(TARGET_NAME)\"",
-				"SDKROOT": "appletvos",
-				"TEST_HOST": "\"$(BUILT_PRODUCTS_DIR)/RoosterSecond-tvOS.app/RoosterSecond-tvOS\"",
-				"TVOS_DEPLOYMENT_TARGET": "10.1"
-			},
-			"name": "Debug"
-		},
-		"2D02E4991E0B4A5E006451C7_comment": "Debug",
-		"2D02E49A1E0B4A5E006451C7": {
-			"isa": "XCBuildConfiguration",
-			"buildSettings": {
-				"BUNDLE_LOADER": "\"$(TEST_HOST)\"",
-				"CLANG_ANALYZER_NONNULL": "YES",
-				"CLANG_WARN_DOCUMENTATION_COMMENTS": "YES",
-				"CLANG_WARN_INFINITE_RECURSION": "YES",
-				"CLANG_WARN_SUSPICIOUS_MOVE": "YES",
-				"COPY_PHASE_STRIP": "NO",
-				"DEBUG_INFORMATION_FORMAT": "\"dwarf-with-dsym\"",
-				"GCC_NO_COMMON_BLOCKS": "YES",
-				"INFOPLIST_FILE": "\"RoosterSecond-tvOSTests/Info.plist\"",
-				"LD_RUNPATH_SEARCH_PATHS": "\"$(inherited) @executable_path/Frameworks @loader_path/Frameworks\"",
-				"PRODUCT_BUNDLE_IDENTIFIER": "\"com.facebook.REACT.RoosterSecond-tvOSTests\"",
-				"PRODUCT_NAME": "\"$(TARGET_NAME)\"",
-				"SDKROOT": "appletvos",
-				"TEST_HOST": "\"$(BUILT_PRODUCTS_DIR)/RoosterSecond-tvOS.app/RoosterSecond-tvOS\"",
-				"TVOS_DEPLOYMENT_TARGET": "10.1"
-			},
-			"name": "Release"
-		},
-		"2D02E49A1E0B4A5E006451C7_comment": "Release",
-		"83CBBA201A601CBA00E9B192": {
+		"0CF68AD31AF0540F00FF9E5C": {
 			"isa": "XCBuildConfiguration",
 			"buildSettings": {
 				"ALWAYS_SEARCH_USER_PATHS": "NO",
@@ -512,7 +372,6 @@
 				"CLANG_WARN_OBJC_ROOT_CLASS": "YES_ERROR",
 				"CLANG_WARN_UNREACHABLE_CODE": "YES",
 				"CLANG_WARN__DUPLICATE_METHOD_MATCH": "YES",
-				"\"CODE_SIGN_IDENTITY[sdk=iphoneos*]\"": "\"iPhone Developer\"",
 				"COPY_PHASE_STRIP": "NO",
 				"ENABLE_STRICT_OBJC_MSGSEND": "YES",
 				"GCC_C_LANGUAGE_STANDARD": "gnu99",
@@ -532,12 +391,13 @@
 				"IPHONEOS_DEPLOYMENT_TARGET": "8.0",
 				"MTL_ENABLE_DEBUG_INFO": "YES",
 				"ONLY_ACTIVE_ARCH": "YES",
-				"SDKROOT": "iphoneos"
+				"SDKROOT": "iphoneos",
+				"SKIP_INSTALL": "YES"
 			},
 			"name": "Debug"
 		},
-		"83CBBA201A601CBA00E9B192_comment": "Debug",
-		"83CBBA211A601CBA00E9B192": {
+		"0CF68AD31AF0540F00FF9E5C_comment": "Debug",
+		"0CF68AD41AF0540F00FF9E5C": {
 			"isa": "XCBuildConfiguration",
 			"buildSettings": {
 				"ALWAYS_SEARCH_USER_PATHS": "NO",
@@ -554,8 +414,7 @@
 				"CLANG_WARN_OBJC_ROOT_CLASS": "YES_ERROR",
 				"CLANG_WARN_UNREACHABLE_CODE": "YES",
 				"CLANG_WARN__DUPLICATE_METHOD_MATCH": "YES",
-				"\"CODE_SIGN_IDENTITY[sdk=iphoneos*]\"": "\"iPhone Developer\"",
-				"COPY_PHASE_STRIP": "YES",
+				"COPY_PHASE_STRIP": "NO",
 				"ENABLE_NS_ASSERTIONS": "NO",
 				"ENABLE_STRICT_OBJC_MSGSEND": "YES",
 				"GCC_C_LANGUAGE_STANDARD": "gnu99",
@@ -568,11 +427,30 @@
 				"IPHONEOS_DEPLOYMENT_TARGET": "8.0",
 				"MTL_ENABLE_DEBUG_INFO": "NO",
 				"SDKROOT": "iphoneos",
+				"SKIP_INSTALL": "YES",
 				"VALIDATE_PRODUCT": "YES"
 			},
 			"name": "Release"
 		},
-		"83CBBA211A601CBA00E9B192_comment": "Release"
+		"0CF68AD41AF0540F00FF9E5C_comment": "Release",
+		"0CF68AD61AF0540F00FF9E5C": {
+			"isa": "XCBuildConfiguration",
+			"buildSettings": {
+				"OTHER_LDFLAGS": "\"-ObjC\"",
+				"PRODUCT_NAME": "\"$(TARGET_NAME)\""
+			},
+			"name": "Debug"
+		},
+		"0CF68AD61AF0540F00FF9E5C_comment": "Debug",
+		"0CF68AD71AF0540F00FF9E5C": {
+			"isa": "XCBuildConfiguration",
+			"buildSettings": {
+				"OTHER_LDFLAGS": "\"-ObjC\"",
+				"PRODUCT_NAME": "\"$(TARGET_NAME)\""
+			},
+			"name": "Release"
+		},
+		"0CF68AD71AF0540F00FF9E5C_comment": "Release"
 	},
 	"frameworks": null,
 	"resources": null,
@@ -580,8 +458,8 @@
 		"isa": "PBXGroup",
 		"children": [
 			{
-				"value": "00C302AC1ABCB8CE00DB3ED1",
-				"comment": "libRCTActionSheet.a"
+				"value": "0CF68AC11AF0540F00FF9E5C",
+				"comment": "libART.a"
 			}
 		],
 		"name": "Products",
@@ -590,915 +468,483 @@
 	"plugins": null,
 	"sources": null,
 	"NativeTargetSection": {
-		"00E356ED1AD99517003FC87E": {
+		"0CF68AC01AF0540F00FF9E5C": {
 			"isa": "PBXNativeTarget",
-			"buildConfigurationList": "00E357021AD99517003FC87E",
-			"buildConfigurationList_comment": "Build configuration list for PBXNativeTarget \"RoosterSecondTests\"",
+			"buildConfigurationList": "0CF68AD51AF0540F00FF9E5C",
+			"buildConfigurationList_comment": "Build configuration list for PBXNativeTarget \"ART\"",
 			"buildPhases": [
 				{
-					"value": "00E356EA1AD99517003FC87E",
+					"value": "0CF68ABD1AF0540F00FF9E5C",
 					"comment": "Sources"
 				},
 				{
-					"value": "00E356EB1AD99517003FC87E",
+					"value": "0CF68ABE1AF0540F00FF9E5C",
 					"comment": "Frameworks"
 				},
 				{
-					"value": "00E356EC1AD99517003FC87E",
-					"comment": "Resources"
-				}
-			],
-			"buildRules": [],
-			"dependencies": [
-				{
-					"value": "00E356F51AD99517003FC87E",
-					"comment": "PBXTargetDependency"
-				}
-			],
-			"name": "RoosterSecondTests",
-			"productName": "RoosterSecondTests",
-			"productReference": "00E356EE1AD99517003FC87E",
-			"productReference_comment": "RoosterSecondTests.xctest",
-			"productType": "\"com.apple.product-type.bundle.unit-test\""
-		},
-		"00E356ED1AD99517003FC87E_comment": "RoosterSecondTests",
-		"13B07F861A680F5B00A75B9A": {
-			"isa": "PBXNativeTarget",
-			"buildConfigurationList": "13B07F931A680F5B00A75B9A",
-			"buildConfigurationList_comment": "Build configuration list for PBXNativeTarget \"RoosterSecond\"",
-			"buildPhases": [
-				{
-					"value": "13B07F871A680F5B00A75B9A",
-					"comment": "Sources"
-				},
-				{
-					"value": "13B07F8C1A680F5B00A75B9A",
-					"comment": "Frameworks"
-				},
-				{
-					"value": "13B07F8E1A680F5B00A75B9A",
-					"comment": "Resources"
-				},
-				{
-					"value": "00DD1BFF1BD5951E006B06BC",
-					"comment": "Bundle React Native code and images"
+					"value": "0CF68ABF1AF0540F00FF9E5C",
+					"comment": "CopyFiles"
 				}
 			],
 			"buildRules": [],
 			"dependencies": [],
-			"name": "RoosterSecond",
-			"productName": "\"Hello World\"",
-			"productReference": "13B07F961A680F5B00A75B9A",
-			"productReference_comment": "RoosterSecond.app",
-			"productType": "\"com.apple.product-type.application\""
+			"name": "ART",
+			"productName": "ART",
+			"productReference": "0CF68AC11AF0540F00FF9E5C",
+			"productReference_comment": "libART.a",
+			"productType": "\"com.apple.product-type.library.static\""
 		},
-		"13B07F861A680F5B00A75B9A_comment": "RoosterSecond",
-		"2D02E47A1E0B4A5D006451C7": {
-			"isa": "PBXNativeTarget",
-			"buildConfigurationList": "2D02E4BA1E0B4A5E006451C7",
-			"buildConfigurationList_comment": "Build configuration list for PBXNativeTarget \"RoosterSecond-tvOS\"",
-			"buildPhases": [
-				{
-					"value": "2D02E4771E0B4A5D006451C7",
-					"comment": "Sources"
-				},
-				{
-					"value": "2D02E4781E0B4A5D006451C7",
-					"comment": "Frameworks"
-				},
-				{
-					"value": "2D02E4791E0B4A5D006451C7",
-					"comment": "Resources"
-				},
-				{
-					"value": "2D02E4CB1E0B4B27006451C7",
-					"comment": "Bundle React Native Code And Images"
-				}
-			],
-			"buildRules": [],
-			"dependencies": [],
-			"name": "\"RoosterSecond-tvOS\"",
-			"productName": "\"RoosterSecond-tvOS\"",
-			"productReference": "2D02E47B1E0B4A5D006451C7",
-			"productReference_comment": "RoosterSecond-tvOS.app",
-			"productType": "\"com.apple.product-type.application\""
+		"0CF68AC01AF0540F00FF9E5C_comment": "ART"
+	},
+	"copyFiles": {
+		"0CF68ABF1AF0540F00FF9E5C": {
+			"isa": "PBXCopyFilesBuildPhase",
+			"buildActionMask": 2147483647,
+			"dstPath": "\"include/$(PRODUCT_NAME)\"",
+			"dstSubfolderSpec": 16,
+			"files": [],
+			"runOnlyForDeploymentPostprocessing": 0
 		},
-		"2D02E47A1E0B4A5D006451C7_comment": "RoosterSecond-tvOS",
-		"2D02E48F1E0B4A5D006451C7": {
-			"isa": "PBXNativeTarget",
-			"buildConfigurationList": "2D02E4BB1E0B4A5E006451C7",
-			"buildConfigurationList_comment": "Build configuration list for PBXNativeTarget \"RoosterSecond-tvOSTests\"",
-			"buildPhases": [
-				{
-					"value": "2D02E48C1E0B4A5D006451C7",
-					"comment": "Sources"
-				},
-				{
-					"value": "2D02E48D1E0B4A5D006451C7",
-					"comment": "Frameworks"
-				},
-				{
-					"value": "2D02E48E1E0B4A5D006451C7",
-					"comment": "Resources"
-				}
-			],
-			"buildRules": [],
-			"dependencies": [
-				{
-					"value": "2D02E4921E0B4A5D006451C7",
-					"comment": "PBXTargetDependency"
-				}
-			],
-			"name": "\"RoosterSecond-tvOSTests\"",
-			"productName": "\"RoosterSecond-tvOSTests\"",
-			"productReference": "2D02E4901E0B4A5D006451C7",
-			"productReference_comment": "RoosterSecond-tvOSTests.xctest",
-			"productType": "\"com.apple.product-type.bundle.unit-test\""
-		},
-		"2D02E48F1E0B4A5D006451C7_comment": "RoosterSecond-tvOSTests"
+		"0CF68ABF1AF0540F00FF9E5C_comment": "CopyFiles"
 	},
 	"buildFiles": {
-		"00C302E51ABCBA2D00DB3ED1": {
+		"0CF68B051AF0549300FF9E5C": {
 			"isa": "PBXBuildFile",
-			"fileRef": "00C302AC1ABCB8CE00DB3ED1",
-			"fileRef_comment": "libRCTActionSheet.a"
+			"fileRef": "0CF68ADE1AF0549300FF9E5C",
+			"fileRef_comment": "ARTGroup.m"
 		},
-		"00C302E51ABCBA2D00DB3ED1_comment": "libRCTActionSheet.a in Frameworks",
-		"00C302E71ABCBA2D00DB3ED1": {
+		"0CF68B051AF0549300FF9E5C_comment": "ARTGroup.m in Sources",
+		"0CF68B061AF0549300FF9E5C": {
 			"isa": "PBXBuildFile",
-			"fileRef": "00C302BA1ABCB90400DB3ED1",
-			"fileRef_comment": "libRCTGeolocation.a"
+			"fileRef": "0CF68AE01AF0549300FF9E5C",
+			"fileRef_comment": "ARTNode.m"
 		},
-		"00C302E71ABCBA2D00DB3ED1_comment": "libRCTGeolocation.a in Frameworks",
-		"00C302E81ABCBA2D00DB3ED1": {
+		"0CF68B061AF0549300FF9E5C_comment": "ARTNode.m in Sources",
+		"0CF68B071AF0549300FF9E5C": {
 			"isa": "PBXBuildFile",
-			"fileRef": "00C302C01ABCB91800DB3ED1",
-			"fileRef_comment": "libRCTImage.a"
+			"fileRef": "0CF68AE21AF0549300FF9E5C",
+			"fileRef_comment": "ARTRenderable.m"
 		},
-		"00C302E81ABCBA2D00DB3ED1_comment": "libRCTImage.a in Frameworks",
-		"00C302E91ABCBA2D00DB3ED1": {
+		"0CF68B071AF0549300FF9E5C_comment": "ARTRenderable.m in Sources",
+		"0CF68B081AF0549300FF9E5C": {
 			"isa": "PBXBuildFile",
-			"fileRef": "00C302DC1ABCB9D200DB3ED1",
-			"fileRef_comment": "libRCTNetwork.a"
+			"fileRef": "0CF68AE41AF0549300FF9E5C",
+			"fileRef_comment": "ARTShape.m"
 		},
-		"00C302E91ABCBA2D00DB3ED1_comment": "libRCTNetwork.a in Frameworks",
-		"00C302EA1ABCBA2D00DB3ED1": {
+		"0CF68B081AF0549300FF9E5C_comment": "ARTShape.m in Sources",
+		"0CF68B091AF0549300FF9E5C": {
 			"isa": "PBXBuildFile",
-			"fileRef": "00C302E41ABCB9EE00DB3ED1",
-			"fileRef_comment": "libRCTVibration.a"
+			"fileRef": "0CF68AE61AF0549300FF9E5C",
+			"fileRef_comment": "ARTSurfaceView.m"
 		},
-		"00C302EA1ABCBA2D00DB3ED1_comment": "libRCTVibration.a in Frameworks",
-		"00E356F31AD99517003FC87E": {
+		"0CF68B091AF0549300FF9E5C_comment": "ARTSurfaceView.m in Sources",
+		"0CF68B0A1AF0549300FF9E5C": {
 			"isa": "PBXBuildFile",
-			"fileRef": "00E356F21AD99517003FC87E",
-			"fileRef_comment": "RoosterSecondTests.m"
+			"fileRef": "0CF68AE81AF0549300FF9E5C",
+			"fileRef_comment": "ARTText.m"
 		},
-		"00E356F31AD99517003FC87E_comment": "RoosterSecondTests.m in Sources",
-		"133E29F31AD74F7200F7D852": {
+		"0CF68B0A1AF0549300FF9E5C_comment": "ARTText.m in Sources",
+		"0CF68B0B1AF0549300FF9E5C": {
 			"isa": "PBXBuildFile",
-			"fileRef": "78C398B91ACF4ADC00677621",
-			"fileRef_comment": "libRCTLinking.a"
+			"fileRef": "0CF68AEC1AF0549300FF9E5C",
+			"fileRef_comment": "ARTBrush.m"
 		},
-		"133E29F31AD74F7200F7D852_comment": "libRCTLinking.a in Frameworks",
-		"139105C61AF99C1200B5F7CC": {
+		"0CF68B0B1AF0549300FF9E5C_comment": "ARTBrush.m in Sources",
+		"0CF68B0C1AF0549300FF9E5C": {
 			"isa": "PBXBuildFile",
-			"fileRef": "139105C11AF99BAD00B5F7CC",
-			"fileRef_comment": "libRCTSettings.a"
+			"fileRef": "0CF68AEE1AF0549300FF9E5C",
+			"fileRef_comment": "ARTLinearGradient.m"
 		},
-		"139105C61AF99C1200B5F7CC_comment": "libRCTSettings.a in Frameworks",
-		"139FDEF61B0652A700C62182": {
+		"0CF68B0C1AF0549300FF9E5C_comment": "ARTLinearGradient.m in Sources",
+		"0CF68B0D1AF0549300FF9E5C": {
 			"isa": "PBXBuildFile",
-			"fileRef": "139FDEF41B06529B00C62182",
-			"fileRef_comment": "libRCTWebSocket.a"
+			"fileRef": "0CF68AF01AF0549300FF9E5C",
+			"fileRef_comment": "ARTPattern.m"
 		},
-		"139FDEF61B0652A700C62182_comment": "libRCTWebSocket.a in Frameworks",
-		"13B07FBC1A68108700A75B9A": {
+		"0CF68B0D1AF0549300FF9E5C_comment": "ARTPattern.m in Sources",
+		"0CF68B0E1AF0549300FF9E5C": {
 			"isa": "PBXBuildFile",
-			"fileRef": "13B07FB01A68108700A75B9A",
-			"fileRef_comment": "AppDelegate.m"
+			"fileRef": "0CF68AF21AF0549300FF9E5C",
+			"fileRef_comment": "ARTRadialGradient.m"
 		},
-		"13B07FBC1A68108700A75B9A_comment": "AppDelegate.m in Sources",
-		"13B07FBD1A68108700A75B9A": {
+		"0CF68B0E1AF0549300FF9E5C_comment": "ARTRadialGradient.m in Sources",
+		"0CF68B0F1AF0549300FF9E5C": {
 			"isa": "PBXBuildFile",
-			"fileRef": "13B07FB11A68108700A75B9A",
-			"fileRef_comment": "LaunchScreen.xib"
+			"fileRef": "0CF68AF41AF0549300FF9E5C",
+			"fileRef_comment": "ARTSolidColor.m"
 		},
-		"13B07FBD1A68108700A75B9A_comment": "LaunchScreen.xib in Resources",
-		"13B07FBF1A68108700A75B9A": {
+		"0CF68B0F1AF0549300FF9E5C_comment": "ARTSolidColor.m in Sources",
+		"0CF68B101AF0549300FF9E5C": {
 			"isa": "PBXBuildFile",
-			"fileRef": "13B07FB51A68108700A75B9A",
-			"fileRef_comment": "Images.xcassets"
+			"fileRef": "0CF68AF71AF0549300FF9E5C",
+			"fileRef_comment": "RCTConvert+ART.m"
 		},
-		"13B07FBF1A68108700A75B9A_comment": "Images.xcassets in Resources",
-		"13B07FC11A68108700A75B9A": {
+		"0CF68B101AF0549300FF9E5C_comment": "RCTConvert+ART.m in Sources",
+		"0CF68B111AF0549300FF9E5C": {
 			"isa": "PBXBuildFile",
-			"fileRef": "13B07FB71A68108700A75B9A",
-			"fileRef_comment": "main.m"
+			"fileRef": "0CF68AFA1AF0549300FF9E5C",
+			"fileRef_comment": "ARTGroupManager.m"
 		},
-		"13B07FC11A68108700A75B9A_comment": "main.m in Sources",
-		"140ED2AC1D01E1AD002B40FF": {
+		"0CF68B111AF0549300FF9E5C_comment": "ARTGroupManager.m in Sources",
+		"0CF68B121AF0549300FF9E5C": {
 			"isa": "PBXBuildFile",
-			"fileRef": "146834041AC3E56700842450",
-			"fileRef_comment": "libReact.a"
+			"fileRef": "0CF68AFC1AF0549300FF9E5C",
+			"fileRef_comment": "ARTNodeManager.m"
 		},
-		"140ED2AC1D01E1AD002B40FF_comment": "libReact.a in Frameworks",
-		"146834051AC3E58100842450": {
+		"0CF68B121AF0549300FF9E5C_comment": "ARTNodeManager.m in Sources",
+		"0CF68B131AF0549300FF9E5C": {
 			"isa": "PBXBuildFile",
-			"fileRef": "146834041AC3E56700842450",
-			"fileRef_comment": "libReact.a"
+			"fileRef": "0CF68AFE1AF0549300FF9E5C",
+			"fileRef_comment": "ARTRenderableManager.m"
 		},
-		"146834051AC3E58100842450_comment": "libReact.a in Frameworks",
-		"2D02E4BC1E0B4A80006451C7": {
+		"0CF68B131AF0549300FF9E5C_comment": "ARTRenderableManager.m in Sources",
+		"0CF68B141AF0549300FF9E5C": {
 			"isa": "PBXBuildFile",
-			"fileRef": "13B07FB01A68108700A75B9A",
-			"fileRef_comment": "AppDelegate.m"
+			"fileRef": "0CF68B001AF0549300FF9E5C",
+			"fileRef_comment": "ARTShapeManager.m"
 		},
-		"2D02E4BC1E0B4A80006451C7_comment": "AppDelegate.m in Sources",
-		"2D02E4BD1E0B4A84006451C7": {
+		"0CF68B141AF0549300FF9E5C_comment": "ARTShapeManager.m in Sources",
+		"0CF68B151AF0549300FF9E5C": {
 			"isa": "PBXBuildFile",
-			"fileRef": "13B07FB51A68108700A75B9A",
-			"fileRef_comment": "Images.xcassets"
+			"fileRef": "0CF68B021AF0549300FF9E5C",
+			"fileRef_comment": "ARTSurfaceViewManager.m"
 		},
-		"2D02E4BD1E0B4A84006451C7_comment": "Images.xcassets in Resources",
-		"2D02E4BF1E0B4AB3006451C7": {
+		"0CF68B151AF0549300FF9E5C_comment": "ARTSurfaceViewManager.m in Sources",
+		"0CF68B161AF0549300FF9E5C": {
 			"isa": "PBXBuildFile",
-			"fileRef": "13B07FB71A68108700A75B9A",
-			"fileRef_comment": "main.m"
+			"fileRef": "0CF68B041AF0549300FF9E5C",
+			"fileRef_comment": "ARTTextManager.m"
 		},
-		"2D02E4BF1E0B4AB3006451C7_comment": "main.m in Sources",
-		"2D02E4C21E0B4AEC006451C7": {
-			"isa": "PBXBuildFile",
-			"fileRef": "5E9157351DD0AC6500FF2AA8",
-			"fileRef_comment": "libRCTAnimation-tvOS.a"
-		},
-		"2D02E4C21E0B4AEC006451C7_comment": "libRCTAnimation-tvOS.a in Frameworks",
-		"2D02E4C31E0B4AEC006451C7": {
-			"isa": "PBXBuildFile",
-			"fileRef": "3DAD3E841DF850E9000B6D8A",
-			"fileRef_comment": "libRCTImage-tvOS.a"
-		},
-		"2D02E4C31E0B4AEC006451C7_comment": "libRCTImage-tvOS.a in Frameworks",
-		"2D02E4C41E0B4AEC006451C7": {
-			"isa": "PBXBuildFile",
-			"fileRef": "3DAD3E881DF850E9000B6D8A",
-			"fileRef_comment": "libRCTLinking-tvOS.a"
-		},
-		"2D02E4C41E0B4AEC006451C7_comment": "libRCTLinking-tvOS.a in Frameworks",
-		"2D02E4C51E0B4AEC006451C7": {
-			"isa": "PBXBuildFile",
-			"fileRef": "3DAD3E8C1DF850E9000B6D8A",
-			"fileRef_comment": "libRCTNetwork-tvOS.a"
-		},
-		"2D02E4C51E0B4AEC006451C7_comment": "libRCTNetwork-tvOS.a in Frameworks",
-		"2D02E4C61E0B4AEC006451C7": {
-			"isa": "PBXBuildFile",
-			"fileRef": "3DAD3E901DF850E9000B6D8A",
-			"fileRef_comment": "libRCTSettings-tvOS.a"
-		},
-		"2D02E4C61E0B4AEC006451C7_comment": "libRCTSettings-tvOS.a in Frameworks",
-		"2D02E4C71E0B4AEC006451C7": {
-			"isa": "PBXBuildFile",
-			"fileRef": "3DAD3E941DF850E9000B6D8A",
-			"fileRef_comment": "libRCTText-tvOS.a"
-		},
-		"2D02E4C71E0B4AEC006451C7_comment": "libRCTText-tvOS.a in Frameworks",
-		"2D02E4C81E0B4AEC006451C7": {
-			"isa": "PBXBuildFile",
-			"fileRef": "3DAD3E991DF850E9000B6D8A",
-			"fileRef_comment": "libRCTWebSocket-tvOS.a"
-		},
-		"2D02E4C81E0B4AEC006451C7_comment": "libRCTWebSocket-tvOS.a in Frameworks",
-		"2D02E4C91E0B4AEC006451C7": {
-			"isa": "PBXBuildFile",
-			"fileRef": "3DAD3EA31DF850E9000B6D8A",
-			"fileRef_comment": "libReact.a"
-		},
-		"2D02E4C91E0B4AEC006451C7_comment": "libReact.a in Frameworks",
-		"2DCD954D1E0B4F2C00145EB5": {
-			"isa": "PBXBuildFile",
-			"fileRef": "00E356F21AD99517003FC87E",
-			"fileRef_comment": "RoosterSecondTests.m"
-		},
-		"2DCD954D1E0B4F2C00145EB5_comment": "RoosterSecondTests.m in Sources",
-		"5E9157361DD0AC6A00FF2AA8": {
-			"isa": "PBXBuildFile",
-			"fileRef": "5E9157331DD0AC6500FF2AA8",
-			"fileRef_comment": "libRCTAnimation.a"
-		},
-		"5E9157361DD0AC6A00FF2AA8_comment": "libRCTAnimation.a in Frameworks",
-		"832341BD1AAA6AB300B99B32": {
-			"isa": "PBXBuildFile",
-			"fileRef": "832341B51AAA6A8300B99B32",
-			"fileRef_comment": "libRCTText.a"
-		},
-		"832341BD1AAA6AB300B99B32_comment": "libRCTText.a in Frameworks"
+		"0CF68B161AF0549300FF9E5C_comment": "ARTTextManager.m in Sources"
 	},
 	"sourceBuildPhase": {
-		"00E356EA1AD99517003FC87E": {
+		"0CF68ABD1AF0540F00FF9E5C": {
 			"isa": "PBXSourcesBuildPhase",
 			"buildActionMask": 2147483647,
 			"files": [
 				{
-					"value": "00E356F31AD99517003FC87E",
-					"comment": "RoosterSecondTests.m in Sources"
-				}
-			],
-			"runOnlyForDeploymentPostprocessing": 0
-		},
-		"00E356EA1AD99517003FC87E_comment": "Sources",
-		"13B07F871A680F5B00A75B9A": {
-			"isa": "PBXSourcesBuildPhase",
-			"buildActionMask": 2147483647,
-			"files": [
-				{
-					"value": "13B07FBC1A68108700A75B9A",
-					"comment": "AppDelegate.m in Sources"
+					"value": "0CF68B161AF0549300FF9E5C",
+					"comment": "ARTTextManager.m in Sources"
 				},
 				{
-					"value": "13B07FC11A68108700A75B9A",
-					"comment": "main.m in Sources"
-				}
-			],
-			"runOnlyForDeploymentPostprocessing": 0
-		},
-		"13B07F871A680F5B00A75B9A_comment": "Sources",
-		"2D02E4771E0B4A5D006451C7": {
-			"isa": "PBXSourcesBuildPhase",
-			"buildActionMask": 2147483647,
-			"files": [
-				{
-					"value": "2D02E4BF1E0B4AB3006451C7",
-					"comment": "main.m in Sources"
+					"value": "0CF68B111AF0549300FF9E5C",
+					"comment": "ARTGroupManager.m in Sources"
 				},
 				{
-					"value": "2D02E4BC1E0B4A80006451C7",
-					"comment": "AppDelegate.m in Sources"
-				}
-			],
-			"runOnlyForDeploymentPostprocessing": 0
-		},
-		"2D02E4771E0B4A5D006451C7_comment": "Sources",
-		"2D02E48C1E0B4A5D006451C7": {
-			"isa": "PBXSourcesBuildPhase",
-			"buildActionMask": 2147483647,
-			"files": [
+					"value": "0CF68B0D1AF0549300FF9E5C",
+					"comment": "ARTPattern.m in Sources"
+				},
 				{
-					"value": "2DCD954D1E0B4F2C00145EB5",
-					"comment": "RoosterSecondTests.m in Sources"
+					"value": "0CF68B0A1AF0549300FF9E5C",
+					"comment": "ARTText.m in Sources"
+				},
+				{
+					"value": "0CF68B121AF0549300FF9E5C",
+					"comment": "ARTNodeManager.m in Sources"
+				},
+				{
+					"value": "0CF68B051AF0549300FF9E5C",
+					"comment": "ARTGroup.m in Sources"
+				},
+				{
+					"value": "0CF68B131AF0549300FF9E5C",
+					"comment": "ARTRenderableManager.m in Sources"
+				},
+				{
+					"value": "0CF68B091AF0549300FF9E5C",
+					"comment": "ARTSurfaceView.m in Sources"
+				},
+				{
+					"value": "0CF68B0E1AF0549300FF9E5C",
+					"comment": "ARTRadialGradient.m in Sources"
+				},
+				{
+					"value": "0CF68B151AF0549300FF9E5C",
+					"comment": "ARTSurfaceViewManager.m in Sources"
+				},
+				{
+					"value": "0CF68B081AF0549300FF9E5C",
+					"comment": "ARTShape.m in Sources"
+				},
+				{
+					"value": "0CF68B071AF0549300FF9E5C",
+					"comment": "ARTRenderable.m in Sources"
+				},
+				{
+					"value": "0CF68B101AF0549300FF9E5C",
+					"comment": "RCTConvert+ART.m in Sources"
+				},
+				{
+					"value": "0CF68B061AF0549300FF9E5C",
+					"comment": "ARTNode.m in Sources"
+				},
+				{
+					"value": "0CF68B0F1AF0549300FF9E5C",
+					"comment": "ARTSolidColor.m in Sources"
+				},
+				{
+					"value": "0CF68B0C1AF0549300FF9E5C",
+					"comment": "ARTLinearGradient.m in Sources"
+				},
+				{
+					"value": "0CF68B0B1AF0549300FF9E5C",
+					"comment": "ARTBrush.m in Sources"
+				},
+				{
+					"value": "0CF68B141AF0549300FF9E5C",
+					"comment": "ARTShapeManager.m in Sources"
 				}
 			],
 			"runOnlyForDeploymentPostprocessing": 0
 		},
-		"2D02E48C1E0B4A5D006451C7_comment": "Sources"
+		"0CF68ABD1AF0540F00FF9E5C_comment": "Sources"
 	},
-	"filePath": "../RoosterSecond/ios/RoosterSecond.xcodeproj/project.pbxproj",
+	"filePath": "./node_modules/react-native/Libraries/ART/ART.xcodeproj/project.pbxproj",
 	"pbxGroup": {
-		"00C302A81ABCB8CE00DB3ED1": {
+		"0CF68AB81AF0540F00FF9E5C": {
 			"isa": "PBXGroup",
 			"children": [
 				{
-					"value": "00C302AC1ABCB8CE00DB3ED1",
-					"comment": "libRCTActionSheet.a"
-				}
-			],
-			"name": "Products",
-			"sourceTree": "\"<group>\""
-		},
-		"00C302A81ABCB8CE00DB3ED1_comment": "Products",
-		"00C302B61ABCB90400DB3ED1": {
-			"isa": "PBXGroup",
-			"children": [
-				{
-					"value": "00C302BA1ABCB90400DB3ED1",
-					"comment": "libRCTGeolocation.a"
-				}
-			],
-			"name": "Products",
-			"sourceTree": "\"<group>\""
-		},
-		"00C302B61ABCB90400DB3ED1_comment": "Products",
-		"00C302BC1ABCB91800DB3ED1": {
-			"isa": "PBXGroup",
-			"children": [
-				{
-					"value": "00C302C01ABCB91800DB3ED1",
-					"comment": "libRCTImage.a"
+					"value": "0CF68AEA1AF0549300FF9E5C",
+					"comment": "Brushes"
 				},
 				{
-					"value": "3DAD3E841DF850E9000B6D8A",
-					"comment": "libRCTImage-tvOS.a"
-				}
-			],
-			"name": "Products",
-			"sourceTree": "\"<group>\""
-		},
-		"00C302BC1ABCB91800DB3ED1_comment": "Products",
-		"00C302D41ABCB9D200DB3ED1": {
-			"isa": "PBXGroup",
-			"children": [
-				{
-					"value": "00C302DC1ABCB9D200DB3ED1",
-					"comment": "libRCTNetwork.a"
+					"value": "0CF68AF81AF0549300FF9E5C",
+					"comment": "ViewManagers"
 				},
 				{
-					"value": "3DAD3E8C1DF850E9000B6D8A",
-					"comment": "libRCTNetwork-tvOS.a"
-				}
-			],
-			"name": "Products",
-			"sourceTree": "\"<group>\""
-		},
-		"00C302D41ABCB9D200DB3ED1_comment": "Products",
-		"00C302E01ABCB9EE00DB3ED1": {
-			"isa": "PBXGroup",
-			"children": [
-				{
-					"value": "00C302E41ABCB9EE00DB3ED1",
-					"comment": "libRCTVibration.a"
-				}
-			],
-			"name": "Products",
-			"sourceTree": "\"<group>\""
-		},
-		"00C302E01ABCB9EE00DB3ED1_comment": "Products",
-		"00E356EF1AD99517003FC87E": {
-			"isa": "PBXGroup",
-			"children": [
-				{
-					"value": "00E356F21AD99517003FC87E",
-					"comment": "RoosterSecondTests.m"
+					"value": "0CF68ADB1AF0549300FF9E5C",
+					"comment": "ARTCGFloatArray.h"
 				},
 				{
-					"value": "00E356F01AD99517003FC87E",
-					"comment": "Supporting Files"
-				}
-			],
-			"path": "RoosterSecondTests",
-			"sourceTree": "\"<group>\""
-		},
-		"00E356EF1AD99517003FC87E_comment": "RoosterSecondTests",
-		"00E356F01AD99517003FC87E": {
-			"isa": "PBXGroup",
-			"children": [
-				{
-					"value": "00E356F11AD99517003FC87E",
-					"comment": "Info.plist"
-				}
-			],
-			"name": "\"Supporting Files\"",
-			"sourceTree": "\"<group>\""
-		},
-		"00E356F01AD99517003FC87E_comment": "Supporting Files",
-		"139105B71AF99BAD00B5F7CC": {
-			"isa": "PBXGroup",
-			"children": [
-				{
-					"value": "139105C11AF99BAD00B5F7CC",
-					"comment": "libRCTSettings.a"
+					"value": "0CF68ADC1AF0549300FF9E5C",
+					"comment": "ARTContainer.h"
 				},
 				{
-					"value": "3DAD3E901DF850E9000B6D8A",
-					"comment": "libRCTSettings-tvOS.a"
-				}
-			],
-			"name": "Products",
-			"sourceTree": "\"<group>\""
-		},
-		"139105B71AF99BAD00B5F7CC_comment": "Products",
-		"139FDEE71B06529A00C62182": {
-			"isa": "PBXGroup",
-			"children": [
-				{
-					"value": "139FDEF41B06529B00C62182",
-					"comment": "libRCTWebSocket.a"
+					"value": "0CF68ADD1AF0549300FF9E5C",
+					"comment": "ARTGroup.h"
 				},
 				{
-					"value": "3DAD3E991DF850E9000B6D8A",
-					"comment": "libRCTWebSocket-tvOS.a"
-				}
-			],
-			"name": "Products",
-			"sourceTree": "\"<group>\""
-		},
-		"139FDEE71B06529A00C62182_comment": "Products",
-		"13B07FAE1A68108700A75B9A": {
-			"isa": "PBXGroup",
-			"children": [
-				{
-					"value": "008F07F21AC5B25A0029DE68",
-					"comment": "main.jsbundle"
+					"value": "0CF68ADE1AF0549300FF9E5C",
+					"comment": "ARTGroup.m"
 				},
 				{
-					"value": "13B07FAF1A68108700A75B9A",
-					"comment": "AppDelegate.h"
+					"value": "0CF68ADF1AF0549300FF9E5C",
+					"comment": "ARTNode.h"
 				},
 				{
-					"value": "13B07FB01A68108700A75B9A",
-					"comment": "AppDelegate.m"
+					"value": "0CF68AE01AF0549300FF9E5C",
+					"comment": "ARTNode.m"
 				},
 				{
-					"value": "13B07FB51A68108700A75B9A",
-					"comment": "Images.xcassets"
+					"value": "0CF68AE11AF0549300FF9E5C",
+					"comment": "ARTRenderable.h"
 				},
 				{
-					"value": "13B07FB61A68108700A75B9A",
-					"comment": "Info.plist"
+					"value": "0CF68AE21AF0549300FF9E5C",
+					"comment": "ARTRenderable.m"
 				},
 				{
-					"value": "13B07FB11A68108700A75B9A",
-					"comment": "LaunchScreen.xib"
+					"value": "0CF68AE31AF0549300FF9E5C",
+					"comment": "ARTShape.h"
 				},
 				{
-					"value": "13B07FB71A68108700A75B9A",
-					"comment": "main.m"
-				}
-			],
-			"name": "RoosterSecond",
-			"sourceTree": "\"<group>\""
-		},
-		"13B07FAE1A68108700A75B9A_comment": "RoosterSecond",
-		"146834001AC3E56700842450": {
-			"isa": "PBXGroup",
-			"children": [
-				{
-					"value": "146834041AC3E56700842450",
-					"comment": "libReact.a"
+					"value": "0CF68AE41AF0549300FF9E5C",
+					"comment": "ARTShape.m"
 				},
 				{
-					"value": "3DAD3EA31DF850E9000B6D8A",
-					"comment": "libReact.a"
+					"value": "0CF68AE51AF0549300FF9E5C",
+					"comment": "ARTSurfaceView.h"
 				},
 				{
-					"value": "3DAD3EA51DF850E9000B6D8A",
-					"comment": "libyoga.a"
+					"value": "0CF68AE61AF0549300FF9E5C",
+					"comment": "ARTSurfaceView.m"
 				},
 				{
-					"value": "3DAD3EA71DF850E9000B6D8A",
-					"comment": "libyoga.a"
+					"value": "0CF68AE71AF0549300FF9E5C",
+					"comment": "ARTText.h"
 				},
 				{
-					"value": "3DAD3EA91DF850E9000B6D8A",
-					"comment": "libcxxreact.a"
+					"value": "0CF68AE81AF0549300FF9E5C",
+					"comment": "ARTText.m"
 				},
 				{
-					"value": "3DAD3EAB1DF850E9000B6D8A",
-					"comment": "libcxxreact.a"
+					"value": "0CF68AE91AF0549300FF9E5C",
+					"comment": "ARTTextFrame.h"
 				},
 				{
-					"value": "3DAD3EAD1DF850E9000B6D8A",
-					"comment": "libjschelpers.a"
+					"value": "0CF68AF61AF0549300FF9E5C",
+					"comment": "RCTConvert+ART.h"
 				},
 				{
-					"value": "3DAD3EAF1DF850E9000B6D8A",
-					"comment": "libjschelpers.a"
-				}
-			],
-			"name": "Products",
-			"sourceTree": "\"<group>\""
-		},
-		"146834001AC3E56700842450_comment": "Products",
-		"5E91572E1DD0AC6500FF2AA8": {
-			"isa": "PBXGroup",
-			"children": [
-				{
-					"value": "5E9157331DD0AC6500FF2AA8",
-					"comment": "libRCTAnimation.a"
+					"value": "0CF68AF71AF0549300FF9E5C",
+					"comment": "RCTConvert+ART.m"
 				},
 				{
-					"value": "5E9157351DD0AC6500FF2AA8",
-					"comment": "libRCTAnimation-tvOS.a"
-				}
-			],
-			"name": "Products",
-			"sourceTree": "\"<group>\""
-		},
-		"5E91572E1DD0AC6500FF2AA8_comment": "Products",
-		"78C398B11ACF4ADC00677621": {
-			"isa": "PBXGroup",
-			"children": [
-				{
-					"value": "78C398B91ACF4ADC00677621",
-					"comment": "libRCTLinking.a"
-				},
-				{
-					"value": "3DAD3E881DF850E9000B6D8A",
-					"comment": "libRCTLinking-tvOS.a"
-				}
-			],
-			"name": "Products",
-			"sourceTree": "\"<group>\""
-		},
-		"78C398B11ACF4ADC00677621_comment": "Products",
-		"832341AE1AAA6A7D00B99B32": {
-			"isa": "PBXGroup",
-			"children": [
-				{
-					"value": "5E91572D1DD0AC6500FF2AA8",
-					"comment": "RCTAnimation.xcodeproj"
-				},
-				{
-					"value": "146833FF1AC3E56700842450",
-					"comment": "React.xcodeproj"
-				},
-				{
-					"value": "00C302A71ABCB8CE00DB3ED1",
-					"comment": "RCTActionSheet.xcodeproj"
-				},
-				{
-					"value": "00C302B51ABCB90400DB3ED1",
-					"comment": "RCTGeolocation.xcodeproj"
-				},
-				{
-					"value": "00C302BB1ABCB91800DB3ED1",
-					"comment": "RCTImage.xcodeproj"
-				},
-				{
-					"value": "78C398B01ACF4ADC00677621",
-					"comment": "RCTLinking.xcodeproj"
-				},
-				{
-					"value": "00C302D31ABCB9D200DB3ED1",
-					"comment": "RCTNetwork.xcodeproj"
-				},
-				{
-					"value": "139105B61AF99BAD00B5F7CC",
-					"comment": "RCTSettings.xcodeproj"
-				},
-				{
-					"value": "832341B01AAA6A8300B99B32",
-					"comment": "RCTText.xcodeproj"
-				},
-				{
-					"value": "00C302DF1ABCB9EE00DB3ED1",
-					"comment": "RCTVibration.xcodeproj"
-				},
-				{
-					"value": "139FDEE61B06529A00C62182",
-					"comment": "RCTWebSocket.xcodeproj"
-				}
-			],
-			"name": "Libraries",
-			"sourceTree": "\"<group>\""
-		},
-		"832341AE1AAA6A7D00B99B32_comment": "Libraries",
-		"832341B11AAA6A8300B99B32": {
-			"isa": "PBXGroup",
-			"children": [
-				{
-					"value": "832341B51AAA6A8300B99B32",
-					"comment": "libRCTText.a"
-				},
-				{
-					"value": "3DAD3E941DF850E9000B6D8A",
-					"comment": "libRCTText-tvOS.a"
-				}
-			],
-			"name": "Products",
-			"sourceTree": "\"<group>\""
-		},
-		"832341B11AAA6A8300B99B32_comment": "Products",
-		"83CBB9F61A601CBA00E9B192": {
-			"isa": "PBXGroup",
-			"children": [
-				{
-					"value": "13B07FAE1A68108700A75B9A",
-					"comment": "RoosterSecond"
-				},
-				{
-					"value": "832341AE1AAA6A7D00B99B32",
-					"comment": "Libraries"
-				},
-				{
-					"value": "00E356EF1AD99517003FC87E",
-					"comment": "RoosterSecondTests"
-				},
-				{
-					"value": "83CBBA001A601CBA00E9B192",
+					"value": "0CF68AC21AF0540F00FF9E5C",
 					"comment": "Products"
 				}
 			],
-			"indentWidth": 2,
-			"sourceTree": "\"<group>\"",
-			"tabWidth": 2
+			"sourceTree": "\"<group>\""
 		},
-		"83CBBA001A601CBA00E9B192": {
+		"0CF68AC21AF0540F00FF9E5C": {
 			"isa": "PBXGroup",
 			"children": [
 				{
-					"value": "13B07F961A680F5B00A75B9A",
-					"comment": "RoosterSecond.app"
-				},
-				{
-					"value": "00E356EE1AD99517003FC87E",
-					"comment": "RoosterSecondTests.xctest"
-				},
-				{
-					"value": "2D02E47B1E0B4A5D006451C7",
-					"comment": "RoosterSecond-tvOS.app"
-				},
-				{
-					"value": "2D02E4901E0B4A5D006451C7",
-					"comment": "RoosterSecond-tvOSTests.xctest"
+					"value": "0CF68AC11AF0540F00FF9E5C",
+					"comment": "libART.a"
 				}
 			],
 			"name": "Products",
 			"sourceTree": "\"<group>\""
 		},
-		"83CBBA001A601CBA00E9B192_comment": "Products"
+		"0CF68AC21AF0540F00FF9E5C_comment": "Products",
+		"0CF68AEA1AF0549300FF9E5C": {
+			"isa": "PBXGroup",
+			"children": [
+				{
+					"value": "0CF68AEB1AF0549300FF9E5C",
+					"comment": "ARTBrush.h"
+				},
+				{
+					"value": "0CF68AEC1AF0549300FF9E5C",
+					"comment": "ARTBrush.m"
+				},
+				{
+					"value": "0CF68AED1AF0549300FF9E5C",
+					"comment": "ARTLinearGradient.h"
+				},
+				{
+					"value": "0CF68AEE1AF0549300FF9E5C",
+					"comment": "ARTLinearGradient.m"
+				},
+				{
+					"value": "0CF68AEF1AF0549300FF9E5C",
+					"comment": "ARTPattern.h"
+				},
+				{
+					"value": "0CF68AF01AF0549300FF9E5C",
+					"comment": "ARTPattern.m"
+				},
+				{
+					"value": "0CF68AF11AF0549300FF9E5C",
+					"comment": "ARTRadialGradient.h"
+				},
+				{
+					"value": "0CF68AF21AF0549300FF9E5C",
+					"comment": "ARTRadialGradient.m"
+				},
+				{
+					"value": "0CF68AF31AF0549300FF9E5C",
+					"comment": "ARTSolidColor.h"
+				},
+				{
+					"value": "0CF68AF41AF0549300FF9E5C",
+					"comment": "ARTSolidColor.m"
+				}
+			],
+			"path": "Brushes",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AEA1AF0549300FF9E5C_comment": "Brushes",
+		"0CF68AF81AF0549300FF9E5C": {
+			"isa": "PBXGroup",
+			"children": [
+				{
+					"value": "0CF68AF91AF0549300FF9E5C",
+					"comment": "ARTGroupManager.h"
+				},
+				{
+					"value": "0CF68AFA1AF0549300FF9E5C",
+					"comment": "ARTGroupManager.m"
+				},
+				{
+					"value": "0CF68AFB1AF0549300FF9E5C",
+					"comment": "ARTNodeManager.h"
+				},
+				{
+					"value": "0CF68AFC1AF0549300FF9E5C",
+					"comment": "ARTNodeManager.m"
+				},
+				{
+					"value": "0CF68AFD1AF0549300FF9E5C",
+					"comment": "ARTRenderableManager.h"
+				},
+				{
+					"value": "0CF68AFE1AF0549300FF9E5C",
+					"comment": "ARTRenderableManager.m"
+				},
+				{
+					"value": "0CF68AFF1AF0549300FF9E5C",
+					"comment": "ARTShapeManager.h"
+				},
+				{
+					"value": "0CF68B001AF0549300FF9E5C",
+					"comment": "ARTShapeManager.m"
+				},
+				{
+					"value": "0CF68B011AF0549300FF9E5C",
+					"comment": "ARTSurfaceViewManager.h"
+				},
+				{
+					"value": "0CF68B021AF0549300FF9E5C",
+					"comment": "ARTSurfaceViewManager.m"
+				},
+				{
+					"value": "0CF68B031AF0549300FF9E5C",
+					"comment": "ARTTextManager.h"
+				},
+				{
+					"value": "0CF68B041AF0549300FF9E5C",
+					"comment": "ARTTextManager.m"
+				}
+			],
+			"path": "ViewManagers",
+			"sourceTree": "\"<group>\""
+		},
+		"0CF68AF81AF0549300FF9E5C_comment": "ViewManagers"
 	},
 	"frameworkBuildPhase": {
-		"00E356EB1AD99517003FC87E": {
-			"isa": "PBXFrameworksBuildPhase",
-			"buildActionMask": 2147483647,
-			"files": [
-				{
-					"value": "140ED2AC1D01E1AD002B40FF",
-					"comment": "libReact.a in Frameworks"
-				}
-			],
-			"runOnlyForDeploymentPostprocessing": 0
-		},
-		"00E356EB1AD99517003FC87E_comment": "Frameworks",
-		"13B07F8C1A680F5B00A75B9A": {
-			"isa": "PBXFrameworksBuildPhase",
-			"buildActionMask": 2147483647,
-			"files": [
-				{
-					"value": "146834051AC3E58100842450",
-					"comment": "libReact.a in Frameworks"
-				},
-				{
-					"value": "5E9157361DD0AC6A00FF2AA8",
-					"comment": "libRCTAnimation.a in Frameworks"
-				},
-				{
-					"value": "00C302E51ABCBA2D00DB3ED1",
-					"comment": "libRCTActionSheet.a in Frameworks"
-				},
-				{
-					"value": "00C302E71ABCBA2D00DB3ED1",
-					"comment": "libRCTGeolocation.a in Frameworks"
-				},
-				{
-					"value": "00C302E81ABCBA2D00DB3ED1",
-					"comment": "libRCTImage.a in Frameworks"
-				},
-				{
-					"value": "133E29F31AD74F7200F7D852",
-					"comment": "libRCTLinking.a in Frameworks"
-				},
-				{
-					"value": "00C302E91ABCBA2D00DB3ED1",
-					"comment": "libRCTNetwork.a in Frameworks"
-				},
-				{
-					"value": "139105C61AF99C1200B5F7CC",
-					"comment": "libRCTSettings.a in Frameworks"
-				},
-				{
-					"value": "832341BD1AAA6AB300B99B32",
-					"comment": "libRCTText.a in Frameworks"
-				},
-				{
-					"value": "00C302EA1ABCBA2D00DB3ED1",
-					"comment": "libRCTVibration.a in Frameworks"
-				},
-				{
-					"value": "139FDEF61B0652A700C62182",
-					"comment": "libRCTWebSocket.a in Frameworks"
-				}
-			],
-			"runOnlyForDeploymentPostprocessing": 0
-		},
-		"13B07F8C1A680F5B00A75B9A_comment": "Frameworks",
-		"2D02E4781E0B4A5D006451C7": {
-			"isa": "PBXFrameworksBuildPhase",
-			"buildActionMask": 2147483647,
-			"files": [
-				{
-					"value": "2D02E4C91E0B4AEC006451C7",
-					"comment": "libReact.a in Frameworks"
-				},
-				{
-					"value": "2D02E4C21E0B4AEC006451C7",
-					"comment": "libRCTAnimation-tvOS.a in Frameworks"
-				},
-				{
-					"value": "2D02E4C31E0B4AEC006451C7",
-					"comment": "libRCTImage-tvOS.a in Frameworks"
-				},
-				{
-					"value": "2D02E4C41E0B4AEC006451C7",
-					"comment": "libRCTLinking-tvOS.a in Frameworks"
-				},
-				{
-					"value": "2D02E4C51E0B4AEC006451C7",
-					"comment": "libRCTNetwork-tvOS.a in Frameworks"
-				},
-				{
-					"value": "2D02E4C61E0B4AEC006451C7",
-					"comment": "libRCTSettings-tvOS.a in Frameworks"
-				},
-				{
-					"value": "2D02E4C71E0B4AEC006451C7",
-					"comment": "libRCTText-tvOS.a in Frameworks"
-				},
-				{
-					"value": "2D02E4C81E0B4AEC006451C7",
-					"comment": "libRCTWebSocket-tvOS.a in Frameworks"
-				}
-			],
-			"runOnlyForDeploymentPostprocessing": 0
-		},
-		"2D02E4781E0B4A5D006451C7_comment": "Frameworks",
-		"2D02E48D1E0B4A5D006451C7": {
+		"0CF68ABE1AF0540F00FF9E5C": {
 			"isa": "PBXFrameworksBuildPhase",
 			"buildActionMask": 2147483647,
 			"files": [],
 			"runOnlyForDeploymentPostprocessing": 0
 		},
-		"2D02E48D1E0B4A5D006451C7_comment": "Frameworks"
+		"0CF68ABE1AF0540F00FF9E5C_comment": "Frameworks"
 	},
 	"buildConfigList": {
-		"00E357021AD99517003FC87E": {
+		"0CF68ABC1AF0540F00FF9E5C": {
 			"isa": "XCConfigurationList",
 			"buildConfigurations": [
 				{
-					"value": "00E356F61AD99517003FC87E",
+					"value": "0CF68AD31AF0540F00FF9E5C",
 					"comment": "Debug"
 				},
 				{
-					"value": "00E356F71AD99517003FC87E",
+					"value": "0CF68AD41AF0540F00FF9E5C",
 					"comment": "Release"
 				}
 			],
 			"defaultConfigurationIsVisible": 0,
 			"defaultConfigurationName": "Release"
 		},
-		"00E357021AD99517003FC87E_comment": "Build configuration list for PBXNativeTarget \"RoosterSecondTests\"",
-		"13B07F931A680F5B00A75B9A": {
+		"0CF68ABC1AF0540F00FF9E5C_comment": "Build configuration list for PBXProject \"ART\"",
+		"0CF68AD51AF0540F00FF9E5C": {
 			"isa": "XCConfigurationList",
 			"buildConfigurations": [
 				{
-					"value": "13B07F941A680F5B00A75B9A",
+					"value": "0CF68AD61AF0540F00FF9E5C",
 					"comment": "Debug"
 				},
 				{
-					"value": "13B07F951A680F5B00A75B9A",
+					"value": "0CF68AD71AF0540F00FF9E5C",
 					"comment": "Release"
 				}
 			],
 			"defaultConfigurationIsVisible": 0,
 			"defaultConfigurationName": "Release"
 		},
-		"13B07F931A680F5B00A75B9A_comment": "Build configuration list for PBXNativeTarget \"RoosterSecond\"",
-		"2D02E4BA1E0B4A5E006451C7": {
-			"isa": "XCConfigurationList",
-			"buildConfigurations": [
-				{
-					"value": "2D02E4971E0B4A5E006451C7",
-					"comment": "Debug"
-				},
-				{
-					"value": "2D02E4981E0B4A5E006451C7",
-					"comment": "Release"
-				}
-			],
-			"defaultConfigurationIsVisible": 0,
-			"defaultConfigurationName": "Release"
-		},
-		"2D02E4BA1E0B4A5E006451C7_comment": "Build configuration list for PBXNativeTarget \"RoosterSecond-tvOS\"",
-		"2D02E4BB1E0B4A5E006451C7": {
-			"isa": "XCConfigurationList",
-			"buildConfigurations": [
-				{
-					"value": "2D02E4991E0B4A5E006451C7",
-					"comment": "Debug"
-				},
-				{
-					"value": "2D02E49A1E0B4A5E006451C7",
-					"comment": "Release"
-				}
-			],
-			"defaultConfigurationIsVisible": 0,
-			"defaultConfigurationName": "Release"
-		},
-		"2D02E4BB1E0B4A5E006451C7_comment": "Build configuration list for PBXNativeTarget \"RoosterSecond-tvOSTests\"",
-		"83CBB9FA1A601CBA00E9B192": {
-			"isa": "XCConfigurationList",
-			"buildConfigurations": [
-				{
-					"value": "83CBBA201A601CBA00E9B192",
-					"comment": "Debug"
-				},
-				{
-					"value": "83CBBA211A601CBA00E9B192",
-					"comment": "Release"
-				}
-			],
-			"defaultConfigurationIsVisible": 0,
-			"defaultConfigurationName": "Release"
-		},
-		"83CBB9FA1A601CBA00E9B192_comment": "Build configuration list for PBXProject \"RoosterSecond\""
+		"0CF68AD51AF0540F00FF9E5C_comment": "Build configuration list for PBXNativeTarget \"ART\""
 	}
 }

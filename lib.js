@@ -159,6 +159,36 @@ function cleanXCodeString(string) {
     return result;
 }
 
+//Should be a library function
+function isComment(string) {
+    if (string.match('_comment')) {
+        return true;
+    } else {
+        return false;
+    }
+}
+lib.isComment = isComment;
+
+
+lib.getIncludeFolders =  ( projObj ) => {
+    var includeFolders = [];
+    for( var key in projObj.pbxGroup) { 
+        if(isComment(key)) continue;
+        var obj = projObj.pbxGroup[key];
+        if(obj.path == null && projObj.pbxGroup[key+"_comment"] == undefined ) { 
+            for(var i = 0; i < obj.children.length;i ++) { 
+                if(projObj.pbxGroup[obj.children[i].value]){
+                    //This is a folder 
+                    if(projObj.pbxGroup[obj.children[i].value].path) 
+                        includeFolders.push(projObj.pbxGroup[obj.children[i].value]);
+
+                }
+            }
+        }
+    }
+    return includeFolders;
+
+}
 
 
 
