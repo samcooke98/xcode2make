@@ -216,31 +216,67 @@ var masterMake = '';
 function generateMakefile(makeInfo, projObj) {
     var targetName = makeInfo.name; //ie: libRCTGeolocation
     var product = makeInfo.product; //ie: libRCTGeolocation.a
-
-    var varForCopyHeaders = `${targetName.toUpperCase()}_COPY_HEADERS`
-    var varForHeadersDest = `${targetName.toUpperCase()}_COPY_HEADERS_DEST`
-    var varForSourceFiles = `${targetName.toUpperCase()}_SOURCE_FILES`
-    var varForFramework = `${targetName.toUpperCase()}_REQUIRED_FRAMEWORKS`
-
-    var varForCompilerFlags = `${targetName.toUpperCase()}_COMPILER_FLAGS`
-    var varForLinkerFlags = `${targetName.toUpperCase()}_LINKER_FLAGS`
-
-    var prerequisites = `$(${varForCopyHeaders}) $(${varForSourceFiles}) `;
-    if (makeInfo.depends) {
-        //If there are depenedencies add them to the pre-reqs
-        prerequisites += `$(${varForFramework})`
-    }
-
+   
     //This will contain variable definitions
     var startOfFile = '';
-    //This is the defintion of the rule
-    var rule = product + ": " + prerequisites + "\n\t";
     //This will contain the shell steps to build the file. 
     var buildSteps = ''
 
+    //Used to store the recipes for .o files
+    var recipes = ''
+    //Used to create the recipe for the header files
+    var CopyHeaderRule = "";
 
-    //If there is a makeInfo.depends array, then add it *Frameworks*
+    //Header Variables 
+    var varForCopyHeaders = `${targetName.toUpperCase()}_COPY_HEADERS_SRC`
+    var varForHeadersDest = `${targetName.toUpperCase()}_COPY_HEADERS_DEST`
+    var varForHeadersResult = `${targetName.toUpperCase()}_COPY_HEADERS_RESULT`
+
+    //Var for source Files
+    var varForSourceFiles = `${targetName.toUpperCase()}_SOURCE_FILES`
+    var varForFramework = `${targetName.toUpperCase()}_REQUIRED_FRAMEWORKS`
+
+    //ObjectiveC Compiler Flags
+    var varForCompilerFlags = `${targetName.toUpperCase()}_COMPILER_FLAGS`
+
+    //CC Compiler Flags
+    var varForC_CompilerFlags = `${targetName.toUpperCase()}_C_COMPILER_FLAGS`
+    //Linker Flags 
+    var varForLinkerFlags = `${targetName.toUpperCase()}_LINKER_FLAGS`
+
+    //var for Objects Directory 
+    var varForObj_Dir = `${targetName.toUpperCase()}_OBJ_DIR`;
+
+    //Var for OBjects
+    var varForCObjects = `${targetName.toUpperCase()}_C_OBJS`;
+    var varForCXXObjects = `${targetName.toUpperCase()}_CXX_OBJS`;
+    var varForObjCObjects = `${targetName.toUpperCase()}_OBJC_OBJS`;
+    var varForAllObjects = `${targetName.toUpperCase()}_ALL_OBJS`
+    //Source File Variables
+    var varForCFiles = `${targetName.toUpperCase()}_C_FILES`;
+    var varForCXXFiles = `${targetName.toUpperCase()}_CXX_FILES`;
+    var varForObjCFiles = `${targetName.toUpperCase()}_OBJC_FILES`;
+
+    
+    //Recipe to make the object directory
+    recipes += `$(${varForObj_Dir}): \n\tmkdir -p $(${varForObj_Dir}) \n`
+
+    //TODO: 
+    //Define the Source File Variables and Objects
+
+
+
+
+    //Define the Object directory
+    startOfFile += `${varForObj_Dir} := $(OBJ_DIR)/${targetName}\n`
+
+    var prerequisites = `$(${varForHeadersResult}) $(${varForAllObjects}) `;
+    /* Generate Frameworks Build Step */
     if (makeInfo.depends) {
+        //If there are depenedencies add them to the pre-reqs
+        prerequisites += `$(${varForFramework})`
+        
+        //Define the variable 
         var str = '';
         for (fileObj of makeInfo.depends) {
             str += fileObj.fileRef_comment + " ";
@@ -248,23 +284,20 @@ function generateMakefile(makeInfo, projObj) {
         startOfFile += `${varForFramework} = ${str}\n`
     }
 
+
+
     /* Generate Build Preferences */
-    //This is tricky, cause there are tons of options to map to
-    var { compilerSettings, linkerSettings } = lib.mapCompilerSettings(makeInfo.buildConfig);
-    // var linkerSettings = lib.mapLinkerSettings(makeInfo.buildConfig);
+    var { compilerSettings, c_compilerSettings, linkerSettings } = lib.mapCompilerSettings(makeInfo.buildConfig);
     console.warn(util.inspect(lib.ignoredWhenMapping, true, null));
 
     startOfFile += `${varForCompilerFlags} = ${compilerSettings}\n${varForLinkerFlags} = ${linkerSettings}\n`
+    startOfFile += `${varForC_CompilerFlags} = ${c_compilerSettings}\n`
 
 
 
 
-    /* Generate the specific target file */
+    /* Generate the step for headers, if necessary */
     if (makeInfo.copyHeaders != undefined) {
-        //Build: CopyHeaders target 
-        console.log('------ Copy Headers Generating -----');
-        console.log(makeInfo.copyHeaders);
-
         //NOTE: In reality, this probably heavily depends on the dstSubFolderSpec variable.
         //TODO: The target path should be absolute, and the destination path should be relying on a variable include_dir
         var headersToMove = '';
@@ -275,21 +308,19 @@ function generateMakefile(makeInfo, projObj) {
         }
         //output
         startOfFile += `${varForCopyHeaders} = ${headersToMove} \n`
-        startOfFile += `${varForHeadersDest} = $(INCLUDE_BUILD_HEADERS)/../${makeInfo.copyHeaders.destination}\n\n`
+        startOfFile += `${varForHeadersDest} = $(realpath $(INCLUDE_BUILD_HEADERS)/../${makeInfo.copyHeaders.destination})\n`
+        startOfFile += `${varForHeadersResult} = $(addprefix $(${varForHeadersDest})/, $(notdir $(${varForCopyHeaders})))\n`
 
-        buildSteps += "@echo Generating Header Folder\n\t"
-        buildSteps += `mkdir -p $(${varForHeadersDest})\n\t`
-        buildSteps += "@echo Copying headers...\n\t"
-        buildSteps += `-@ cp --target-directory=$(${varForHeadersDest}) $(${varForCopyHeaders})\n\t`
+        CopyHeaderRule += `$(${varForHeadersResult}): \n\t`;
+        CopyHeaderRule += "@echo Generating Header Folder\n\t"
+        CopyHeaderRule += `mkdir -p $(${varForHeadersDest})\n\t`
+        CopyHeaderRule += "@echo Copying headers...\n\t"
+        CopyHeaderRule += `-@ cp --target-directory=$(${varForHeadersDest}) $(${varForCopyHeaders})\n\t`
     }
     if (makeInfo.sourceFiles.length != 0) {
-        //Get the path
-        var path = getRootProjFolder(makeInfo)
-
-        // data += `${varForSourceFiles} = `
+        // Get a list of all source files 
         var sourceFiles = ''
         for (file of makeInfo.sourceFiles) {
-
             // console.log(file)
             var str = getFilePath(projObj, file) || 'err'
             sourceFiles += `${str.replace(/\"/g, '')} `
@@ -297,19 +328,44 @@ function generateMakefile(makeInfo, projObj) {
         startOfFile += `${varForSourceFiles} = ${sourceFiles}\n`
         startOfFile += `${varForSourceFiles} := $(realpath $(${varForSourceFiles}))\n`
 
-        buildSteps += `@echo Building files for ` + targetName + "\n\t";
-        // buildSteps += `cd $(OBJS_DIR);  $(COMPILER) $(QUOTE_INCLUDES)  -c $(SOURCES)\n\t`
-        buildSteps += `cd $(OBJS_DIR);  $(COMPILER) $(${varForCompilerFlags}) -c $(${varForSourceFiles})\n\t`
-        //TODO: Generate -iquote arguments
+        //Add the separate files
+        startOfFile += `${varForCFiles} := $(filter %.c, $(${varForSourceFiles}))\n`
+        startOfFile += `${varForCObjects} := $(addprefix $(${varForObj_Dir})/, $(notdir $(patsubst  %.c, %.c.o, $(${varForCFiles}))))\n`
 
-        //Linker step
-        buildSteps += `@echo Linking files to become: ${product} \n\t`
-        buildSteps += `@ mkdir -p $(L_OUTPUT_DIR)\n\t`
-        buildSteps += `$(LINKER) $(FRAMEWORKS) $(LINKER_FLAGS) -o $(L_OUTPUT_DIR)/${product} $(L_INPUT)\n\t`
+        startOfFile += `${varForObjCFiles} := $(filter %.m, $(${varForSourceFiles}))\n`
+        startOfFile += `${varForObjCObjects} := $(${varForObj_Dir})/$(notdir $(patsubst %.m, %.m.o, $(${varForObjCFiles})))\n`
+
+        startOfFile += `${varForCXXFiles} := $(filter %.cpp, $(${varForSourceFiles}))\n`
+        startOfFile += `${varForCXXObjects} := $(${varForObj_Dir})/$(notdir $(patsubst %.cpp, %.cpp.o, $(${varForCXXFiles})))\n`
+
+        startOfFile += `${varForAllObjects} := $(${varForCXXObjects}) $(${varForCObjects}) $(${varForObjCObjects}) `
+
+        //Generate the Recipes
+        recipes += `$(${varForCObjects}): $(${varForCFiles}) | $(${varForObj_Dir})`
+        recipes += `\n\t@echo Building c files for ${targetName}`
+        recipes += `\n\t$(CC_COMPILER) $(${varForC_CompilerFlags}) -c $(filter %/$(notdir $(patsubst  %.c.o, %.c, $@ )), $(${varForCFiles})) -o $@`
+        recipes += '\n\n'
+
+        //C++  files
+        recipes += `$(${varForCXXObjects}): $(${varForCXXFiles}) | $(${varForObj_Dir})`
+        recipes += `\n\t@echo Building c++ files for ${targetName}`
+        recipes += `\n\t$(CXX_COMPILER) $(${varForCompilerFlags}) -c $(filter %/$(notdir $(patsubst  %.cpp.o, %.cpp, $@ )), $(${varForCXXFiles})) -o $@`
+        recipes += "\n\n"
+
+        //ObjC files
+        recipes += `$(${varForObjCObjects}): $(${varForObjCFiles}) | $(${varForObj_Dir})`
+        recipes += `\n\t@echo Building obj-c files for ${targetName}`
+        recipes += `\n\t$(CC_COMPILER) $(${varForC_CompilerFlags}) -c $(filter %/$(notdir $(patsubst  %.m.o, %.m, $@ )), $(${varForObjCFiles})) -o $@`
     }
+    /* Generate Linker Step */
+    //Linker step
+    buildSteps += `${product}: ${prerequisites}\n\t`
+    buildSteps += `@echo Linking files to become: ${product} \n\t`
+    buildSteps += `@ mkdir -p $(L_OUTPUT_DIR)\n\t`
+    buildSteps += `$(LINKER) $(FRAMEWORKS) $(LINKER_FLAGS) -o $(L_OUTPUT_DIR)/${product} $(wildcard $(${varForObj_Dir})/*.o)\n\t`
 
 
-    data = startOfFile + "\n" + rule + buildSteps;
+    data = startOfFile + "\n" + CopyHeaderRule + "\n" + recipes + "\n" + buildSteps;
 
     return data;
 }
@@ -321,16 +377,22 @@ function generateMakefiles(makeInfos, obj) {
     var fileName = 'React2.mk'
 
     for (makeInfo of makeInfos) {
-        // data = '';
+        data = '';
+        var fileName = makeInfo.name + '.mk';
+
+        data += "include ./makefiles/lib/common.mk\n"
 
         data += "\n#Build section for target: " + makeInfo.name + '\n'
         data += "\n"
+        // data += "OBJS_DIR := $(OBJS_DIR)/" + makeInfo.name + "/\n"
         data += generateMakefile(makeInfo, obj)
         data += "\n#End build section for target: " + makeInfo.name
+
+
+        fs.writeFileSync("./makefiles/" + fileName, data)
     }
 
-
-    fs.writeFileSync("./makefiles/" + fileName, data)
+    //TODO: Generate makefile that includes all the files 
 
 }
 
@@ -370,7 +432,7 @@ function getFilePath(projObj, fileObj) {
                                 }
                             }
                         }
-                        return path;
+                        return path + fileObj.path;
                     }
                 }
             }
@@ -401,15 +463,27 @@ function getRootProjFolder(makeInfo) {
 }
 
 
-// start("./node_modules/react-native/Libraries/ART/ART.xcodeproj/project.pbxproj")
-// start("./node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj/project.pbxproj")
-
-// start("./node_modules/react-native/Libraries/Image/RCTImage.xcodeproj/project.pbxproj")
-//Fails to get the source files.
+start("./node_modules/react-native/Libraries/ART/ART.xcodeproj/project.pbxproj")
+start("./node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj/project.pbxproj")
+start("./node_modules/react-native/Libraries/AdSupport/RCTAdSupport.xcodeproj/project.pbxproj");
+start("./node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj/project.pbxproj");
+start("./node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj/project.pbxproj");
+start("./node_modules/react-native/Libraries/Text/RCTText.xcodeproj/project.pbxproj");
+start("./node_modules/react-native/Libraries/Settings/RCTsettings.xcodeproj/project.pbxproj");
+start("./node_modules/react-native/Libraries/Sample/Sample.xcodeproj/project.pbxproj");
+start("./node_modules/react-native/Libraries/RCTTest/RCTTest.xcodeproj/project.pbxproj");
+start("./node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj/project.pbxproj");
+start("./node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj/project.pbxproj");
+start("./node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj/project.pbxproj");
+start("./node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj/project.pbxproj");
+start("./node_modules/react-native/Libraries/Image/RCTImage.xcodeproj/project.pbxproj");
+start("./node_modules/react-native/Libraries/Geolocation/RCTGeolocation.xcodeproj/project.pbxproj");
+start("./node_modules/react-native/Libraries/CameraRoll/RCTCameraRoll.xcodeproj/project.pbxproj");
 
 
 start("./node_modules/react-native/React/React.xcodeproj/project.pbxproj")
-// start("../RoosterSecond/ios/RoosterSecond.xcodeproj/project.pbxproj")
+start("../RoosterSecond/ios/RoosterSecond.xcodeproj/project.pbxproj")
+
 function start(pathToProject) {
     var info = lib.dump(pathToProject);
     fs.writeFileSync("dump.json", JSON.stringify(info, null, "\t"));
@@ -447,7 +521,7 @@ TODO List:
 
     Use the build preferences information 
 
-    Separate Compiling C vs C++ vs ObjC (as they are different settings) -DO Tomorrow
+    Separate Compiling C vs C++ vs ObjC (as they are different settings) - done (i think)
         Do this by generating a separate makefile for each project. ie: 
         gcc_c_language_standard vs CLANG_CXX_LANGUAGE_STANDARD ??/
 
@@ -460,6 +534,3 @@ TODO List:
 */
 
 
-function useBuildPrefs() {
-
-}

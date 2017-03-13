@@ -1,0 +1,23 @@
+
+include ./makefiles/ART.mk
+include ./makefiles/cxxreact.mk
+include ./makefiles/jschelpers.mk
+include ./makefiles/RCTActionSheet.mk
+include ./makefiles/RCTAdSupport.mk
+include ./makefiles/RCTAnimation.mk
+include ./makefiles/RCTCameraRoll.mk
+include ./makefiles/RCTGeolocation.mk
+include ./makefiles/RCTImage.mk
+include ./makefiles/RCTLinking.mk
+include ./makefiles/RCTNetwork.mk
+include ./makefiles/RCTPushNotification.mk
+include ./makefiles/RCTSettings.mk
+include ./makefiles/RCTTest.mk
+include ./makefiles/RCTText.mk
+include ./makefiles/RCTVibration.mk
+include ./makefiles/RCTWebSocket.mk
+include ./makefiles/React.mk
+include ./makefiles/RoosterSecond.mk
+include ./makefiles/RoosterSecondTests.mk
+include ./makefiles/Sample.mk
+include ./makefiles/yoga.mk

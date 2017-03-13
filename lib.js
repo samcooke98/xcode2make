@@ -36,15 +36,25 @@ lib.ignoredWhenMapping = [];
 lib.mapCompilerSettings = (config) => {
     console.log("Mapping Config Object");
     console.log(config);
-    var compilerSettings = '';
     var linkerSettings = '';
+    var c_compilerSettings = ''
+    var compilerSettings = '';
+    // var cxx_compilerSettings; 
+    //TODO: Handle C++ standards
 
     for (key in config.buildSettings) {
         var value = config.buildSettings[key]
         switch (key) {
             case "CLANG_CXX_LANGUAGE_STANDARD":
                 //TODO: handle this vs. GCC_C_LANGUAGE_STANDARD
-                compilerSettings += " -std=" + cleanXCodeString(config.buildSettings[key])
+                // compilerSettings += " -std=" + cleanXCodeString(config.buildSettings[key])
+                switch (cleanXCodeString(config.buildSettings[key])) {
+                    case "gnu++0x":
+                        compilerSettings += " -std=gnu++11";
+                        break;
+                    default:
+                        console.warn("Not handling CLANG_CXX_LANGUAGE_STANDARD of " + config.buildSettings[key])
+                }
                 break;
             case "CLANG_CXX_LIBRARY":
                 compilerSettings += " -stdlib=" + cleanXCodeString(config.buildSettings[key]);
@@ -105,14 +115,26 @@ lib.mapCompilerSettings = (config) => {
             case "GCC_WARN_SHADOW":
                 compilerSettings += warning(value, "shadow");
                 break;
-
+            case "GCC_C_LANGUAGE_STANDARD":
+                c_compilerSettings += " -std=" + value;
+                break;
             default:
-                lib.ignoredWhenMapping.push({ value: config.buildSettings[key], key: key })
+                lib.addNoDuplicates(key, config.buildSettings[key])
                 break;
         }
     }
-    return { compilerSettings, linkerSettings }
+    return { compilerSettings, c_compilerSettings, linkerSettings }
 }
+
+lib.addNoDuplicates = (key, value) => {
+    for (var obj of lib.ignoredWhenMapping) {
+        if (obj.key == key) {
+            return;
+        }
+    }
+    lib.ignoredWhenMapping.push({ key: key, value: value });
+}
+
 
 /* value = "YES", "YES_ERROR", "NO"), warning = "deprecated-objc-isa-usage" for eg */
 function warning(value, warning) {
@@ -136,6 +158,14 @@ function cleanXCodeString(string) {
 
     return result;
 }
+
+
+
+
+
+
+
+
 
 
 

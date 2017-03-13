@@ -20,3 +20,5 @@ dstSubfolderSpec property value used in a PBXCopyFilesBuildPhase object.
  http://www.monobjc.net/xcode-project-file-format.html
 
  https://pewpewthespells.com/blog/buildsettings.html
+
+ https://support.enthought.com/hc/en-us/articles/204469410-OS-X-GCC-Clang-and-Cython-in-10-9-Mavericks
