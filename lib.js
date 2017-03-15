@@ -49,9 +49,12 @@ lib.mapCompilerSettings = (config) => {
                 //TODO: handle this vs. GCC_C_LANGUAGE_STANDARD
                 // compilerSettings += " -std=" + cleanXCodeString(config.buildSettings[key])
                 switch (cleanXCodeString(config.buildSettings[key])) {
-                    case "gnu++0x":
-                        compilerSettings += " -std=gnu++11";
-                        break;
+                    case "c++98": compilerSettings += " -std=c++98"; break;
+                    case "gnu++98": compilerSettings += " -std=gnu++98"; break;
+                    case "c++0x": compilerSettings += " -std=c++11"; break;
+                    case "gnu++0x": compilerSettings += " -std=gnu++11"; break;
+                    case "c++14": compilerSettings += " -std=c++1y"; break;
+                    case "gnu++14": compilerSettings += " -std=gnu++1y"; break;
                     default:
                         console.warn("Not handling CLANG_CXX_LANGUAGE_STANDARD of " + config.buildSettings[key])
                 }
@@ -61,7 +64,8 @@ lib.mapCompilerSettings = (config) => {
                 break;
             case "CLANG_ENABLE_MODULES":
                 if (value == "YES")
-                    compilerSettings += " -fmodules";
+                    c_compilerSettings, compilerSettings += " -fmodules";
+
                 break;
             case "WARNING_CFLAGS":
                 for (var i = 0; i < value.length; i++) {
@@ -71,6 +75,7 @@ lib.mapCompilerSettings = (config) => {
             case "CLANG_ENABLE_OBJC_ARC":
                 if (value == "YES")
                     compilerSettings += " -fobjc-arc";
+                c_compilerSettings += "-fobjc-arc";
                 break;
             case "CLANG_WARN_BOOL_CONVERSION":
                 if (value == "YES")
@@ -110,14 +115,80 @@ lib.mapCompilerSettings = (config) => {
                     compilerSettings += " -strip-debug-symbols";
                 break;
             case "ENABLE_STRICT_OBJC_MSGSEND":
-                compilerSettings += " -DOBJC_OLD_DISPATCH_PROTOTYPES=0"
+                compilerSettings += " -DOBJC_OLD_DISPATCH_PROTOTYPES=0";
+                c_compilerSettings += " -DOBJC_OLD_DISPATCH_PROTOTYPES=0";
                 break;
             case "GCC_WARN_SHADOW":
-                compilerSettings += warning(value, "shadow");
+                c_compilerSettings += warning(value, "shadow");
                 break;
             case "GCC_C_LANGUAGE_STANDARD":
                 c_compilerSettings += " -std=" + value;
                 break;
+            case "GCC_WARN_UNUSED_VARIABLE":
+                c_compilerSettings += warning(value, "unused-variable");
+                break;
+            case "GCC_WARN_UNUSED_FUNCTION":
+                c_compilerSettings += warning(value, "unused-function");
+                break;
+            case "GCC_SYMBOLS_PRIVATE_EXTERN":
+                if (value == "YES") c_compilerSettings += " -fvisibility=hidden"
+                break;
+            case "GCC_WARN_64_TO_32_BIT_CONVERSION":
+                c_compilerSettings += warning(value, "shorten-64-to-32");
+                break;
+            case "GCC_WARN_ABOUT_RETURN_TYPE":
+                c_compilerSettings += warning(value, "return-type");
+                break;
+            case "GCC_WARN_UNDECLARED_SELECTOR":
+                c_compilerSettings += warning(value, "undeclared-selector");
+                break;
+            case "GCC_WARN_UNINITIALIZED_AUTOS":
+                switch (value) {
+                    case "YES":
+                        c_compilerSettings += " -Wuninitialized";
+                        break;
+                    case "YES_AGGRESSIVE":
+                        c_compilerSettings += " -Wconditional-uninitialized";
+                    case "NO":
+                        c_compilerSettings += " -Wno-uninitialized";
+                }
+                break;
+            case "GCC_DYNAMIC_NO_PIC":
+                if (value == "YES") c_compilerSettings += " -mydnamic-no-pic";
+                break;
+            case "GCC_OPTIMIZATION_LEVEL":
+                c_compilerSettings += ` -O${value}`
+                break;
+            case "GCC_PREPROCESSOR_DEFINITIONS":
+                if (typeof value == "array") {
+                    for (var i = 0; i < value.length; i++) {
+                        if (value[i] != '"$(inherited)"') {
+                            c_compilerSettings += ` -D${value[i]}`;
+                            compilerSettings += ` -D${value[i]}`;
+                        }
+                    }
+                } else {
+                    console.warn("At line 166");
+                }
+                break;
+            case "OTHER_LDFLAGS":
+                if (value == '"$(inherited)"') { break; }
+                if (typeof value == "array") {
+                    for (var i = 0; i < value.length; i++) {
+                        if (value != '"$(inherited)"')
+                            linkerSettings += " " + value[i];
+                    }
+                } else {
+                    linkerSettings += " " + cleanXCodeString(value);
+                }
+                break;
+            case "IPHONEOS_DEPLOYMENT_TARGET":
+                compilerSettings += " -miphoneos-version-min=" + value;
+                break;
+            case "MTL_ENABLE_DEBUG_INFO":
+                compilerSettings, c_compilerSettings += " -gline-tables-only";
+                break;
+
             default:
                 lib.addNoDuplicates(key, config.buildSettings[key])
                 break;
@@ -170,18 +241,18 @@ function isComment(string) {
 lib.isComment = isComment;
 
 
-lib.getIncludeFolders =  ( projObj ) => {
+lib.getIncludeFolders = (projObj) => {
     var includeFolders = [];
-    for( var key in projObj.pbxGroup) { 
-        if(isComment(key)) continue;
+    for (var key in projObj.pbxGroup) {
+        if (isComment(key)) continue;
         var obj = projObj.pbxGroup[key];
-        if(obj.path == null && projObj.pbxGroup[key+"_comment"] == undefined ) { 
-            for(var i = 0; i < obj.children.length;i ++) { 
-                if(projObj.pbxGroup[obj.children[i].value]){
+        if (obj.path == null) {
+            for (var i = 0; i < obj.children.length; i++) {
+                if (projObj.pbxGroup[obj.children[i].value]) {
                     //This is a folder 
-                    if(projObj.pbxGroup[obj.children[i].value].path) 
+                    if (projObj.pbxGroup[obj.children[i].value].path) {
                         includeFolders.push(projObj.pbxGroup[obj.children[i].value]);
-
+                    }
                 }
             }
         }
@@ -200,3 +271,44 @@ lib.getIncludeFolders =  ( projObj ) => {
 
 
 module.exports = lib
+
+
+function getFilePath(projObj, fileObj) {
+    //We are accessing projObj.pbxGroup
+    var fileRef = fileObj.fileRef
+    //TODO: Handle recursion in deeper layers.
+    for (var key in projObj.pbxGroup) {
+        if (!isComment(key)) {
+            // console.log(key)
+            //Loop through the folder
+            for (var secondKey in projObj.pbxGroup[key].children) {
+                // console.log(projObj.pbxGroup[key].children[secondKey])
+                var folderObj = projObj.pbxGroup[key].children[secondKey]
+                if (folderObj.value == fileRef) {
+                    // console.log("Found it!");
+                    //From here we can start generating a path; 
+                    if (projObj.pbxGroup[key].path != null) {
+                        //We have to find the parent of the folderObj now.
+                        //But the path so far is: 
+                        var pathSoFar = getFilePath(projObj, { fileRef: key, path: '' }) + projObj.pbxGroup[key].path + '/' + fileObj.path;
+                        return pathSoFar;
+                    } else {
+                        var pathSplit = projObj.filePath.split('/');
+                        var path = '';
+                        for (var i = 0; i < pathSplit.length; i++) {
+                            if (pathSplit[i].search(".xcodeproj") != -1) {
+                                for (var j = 0; j < i; j++) {
+                                    path += pathSplit[j] + '/'
+                                }
+                            }
+                        }
+                        return path + fileObj.path;
+                    }
+                }
+            }
+        }
+    }
+    console.warn("Couldn't find a file");
+    console.warn(util.inspect(fileObj))
+
+}

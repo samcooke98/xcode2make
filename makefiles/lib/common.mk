@@ -16,7 +16,7 @@ OUTPUT_DIR = ./build
 
 INTERMEDIATE_DIR = $(OUTPUT_DIR)/intermediate/
 INCLUDE_BUILD_HEADERS = $(INTERMEDIATE_DIR)/include/
-
+export INCLUDE_BUILD_HEADERS
 
 #Architecture to compile for 
 ARCH = armv7 
@@ -39,10 +39,12 @@ REACT-NATIVE := $(abspath $(REACT-NATIVE))
 
 #Basic Flags
 
-COMPILER_INCLUDE = -v -I$(INCLUDE_BUILD_HEADERS) -I/root/theos/include/iphone/ -I/root/theos/include/ -I/root/theos/vendor/include -I/root/theos/include/_fallback  -I/root/theos/sdks/iPhoneOS9.2.sdk/usr/include/
+COMPILER_INCLUDE = -v -MD -MF./temp.txt -I$(INCLUDE_BUILD_HEADERS) -I/root/theos/include/iphone/ -I/root/theos/include/ -I/root/theos/vendor/include -I/root/theos/include/_fallback  -I/root/theos/sdks/iPhoneOS.sdk/usr/include/
 
-BASIC_COMPILER_FLAGS = -isysroot "/root/theos/sdks/iPhoneOS9.2.sdk" $(COMPILER_INCLUDE)
+# COMPILER_INCLUDE = -v -I/root/theos/include/iphone/ -I/root/theos/include/ -I/root/theos/vendor/include -I/root/theos/include/_fallback  -I/root/theos/sdks/iPhoneOS9.2.sdk/usr/include/
 
+# BASIC_COMPILER_FLAGS = -isysroot "/root/theos/sdks/iPhoneOS9.2.sdk" $(COMPILER_INCLUDE)
+BASIC_COMPILER_FLAGS = -isysroot "/root/theos/sdks/iPhoneOS.sdk" $(COMPILER_INCLUDE)
 
 COMPILER_FLAGS +=-std=c++14 -fobjc-arc -Os -g -fmodules -Wextra -Wall
 

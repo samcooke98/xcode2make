@@ -285,6 +285,7 @@ function generateMakefile(makeInfo, projObj) {
     /* Generate Build Preferences */
     var { compilerSettings, c_compilerSettings, linkerSettings } = lib.mapCompilerSettings(makeInfo.buildConfig);
     console.warn(util.inspect(lib.ignoredWhenMapping, true, null));
+    // console.warn(util.inspect(makeInfo.buildConfig, true, null));
 
     //TODO: Add to the ".." search paths 
     var result = lib.getIncludeFolders(projObj)
@@ -310,7 +311,7 @@ function generateMakefile(makeInfo, projObj) {
         }
         //output
         startOfFile += `${varForCopyHeaders} = ${headersToMove} \n`
-        startOfFile += `${varForHeadersDest} = $(realpath $(INCLUDE_BUILD_HEADERS)/../${makeInfo.copyHeaders.destination})\n`
+        startOfFile += `${varForHeadersDest} := $(abspath $(INCLUDE_BUILD_HEADERS)/../${makeInfo.copyHeaders.destination})\n`
         startOfFile += `${varForHeadersResult} = $(addprefix $(${varForHeadersDest})/, $(notdir $(${varForCopyHeaders})))\n`
 
         CopyHeaderRule += `$(${varForHeadersResult}): \n\t`;
@@ -335,10 +336,10 @@ function generateMakefile(makeInfo, projObj) {
         startOfFile += `${varForCObjects} := $(addprefix $(${varForObj_Dir})/, $(notdir $(patsubst  %.c, %.c.o, $(${varForCFiles}))))\n`
 
         startOfFile += `${varForObjCFiles} := $(filter %.m, $(${varForSourceFiles}))\n`
-        startOfFile += `${varForObjCObjects} := $(${varForObj_Dir})/$(notdir $(patsubst %.m, %.m.o, $(${varForObjCFiles})))\n`
+        startOfFile += `${varForObjCObjects} := $(addprefix $(${varForObj_Dir})/, $(notdir $(patsubst %.m, %.m.o, $(${varForObjCFiles}))))\n`
 
         startOfFile += `${varForCXXFiles} := $(filter %.cpp, $(${varForSourceFiles}))\n`
-        startOfFile += `${varForCXXObjects} := $(${varForObj_Dir})/$(notdir $(patsubst %.cpp, %.cpp.o, $(${varForCXXFiles})))\n`
+        startOfFile += `${varForCXXObjects} := $(addprefix $(${varForObj_Dir})/, $(notdir $(patsubst %.cpp, %.cpp.o, $(${varForCXXFiles}))))\n`
 
         startOfFile += `${varForAllObjects} := $(${varForCXXObjects}) $(${varForCObjects}) $(${varForObjCObjects}) `
 
@@ -417,7 +418,7 @@ function getFilePath(projObj, fileObj) {
                 // console.log(projObj.pbxGroup[key].children[secondKey])
                 var folderObj = projObj.pbxGroup[key].children[secondKey]
                 if (folderObj.value == fileRef) {
-                    console.log("Found it!");
+                    // console.log("Found it!");
                     //From here we can start generating a path; 
                     if (projObj.pbxGroup[key].path != null) {
                         //We have to find the parent of the folderObj now.
@@ -458,14 +459,14 @@ function getRootProjFolder(makeInfo) {
                 path += a[j] + "/";
             }
             // path += a[i].replace(".xcodeproj", "/");
-            console.log("line 273: " + path)
+            // console.log("line 273: " + path)
             return path;
         }
     }
 }
 
 
-start("./node_modules/react-native/Libraries/ART/ART.xcodeproj/project.pbxproj")
+// start("./node_modules/react-native/Libraries/ART/ART.xcodeproj/project.pbxproj")
 // start("./node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj/project.pbxproj")
 // start("./node_modules/react-native/Libraries/AdSupport/RCTAdSupport.xcodeproj/project.pbxproj");
 // start("./node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj/project.pbxproj");
@@ -483,7 +484,7 @@ start("./node_modules/react-native/Libraries/ART/ART.xcodeproj/project.pbxproj")
 // start("./node_modules/react-native/Libraries/CameraRoll/RCTCameraRoll.xcodeproj/project.pbxproj");
 
 
-// start("./node_modules/react-native/React/React.xcodeproj/project.pbxproj")
+start("./node_modules/react-native/React/React.xcodeproj/project.pbxproj")
 // start("../RoosterSecond/ios/RoosterSecond.xcodeproj/project.pbxproj")
 
 function start(pathToProject) {

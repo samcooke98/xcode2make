@@ -3,6 +3,9 @@ to-dump/
 makefiles/
 build/ 
 
+#Ignore some common debug files
+*.output
+*.json
 
 .vscode/
 
