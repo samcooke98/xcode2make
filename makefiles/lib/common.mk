@@ -8,9 +8,6 @@ CXX_COMPILER = $(THEOS)/toolchain/linux/iphone/bin/armv7-apple-darwin11-clang++ 
 
 LINKER = $(THEOS)/toolchain/linux/iphone/bin/armv7-apple-darwin11-libtool
 
-
-
-
 #Output directory
 OUTPUT_DIR = ./build
 

@@ -5,7 +5,7 @@ var util = require('util');
 var xcode = require('xcode')
 var pathLib = require('path');
 
-var lib = require('./lib.js');
+var lib = require('./src/lib.js');
 
 var makeInfo = {}
 
@@ -71,143 +71,7 @@ function main(xcodeInfo) {
     console.log("--------------Finished File-----------------")
 }
 
-function generateBuildPreferences(projObj, buildConfigListKey, makeInfo) {
-    //Access 
-    // projObj.buildConfigSection
-    var list = projObj.buildConfigList[buildConfigListKey];
-    console.log(projObj.buildConfigList[buildConfigListKey])
 
-    //For now, only do the first entry (TODO: Handle this better)
-    //This is for a target ie: Debug or Release
-    for (var i = 0; i < 1; i++) {
-        var config = projObj.buildConfigSection[list.buildConfigurations[i].value];
-        console.log(config);
-        if (makeInfo.buildConfig) {
-            makeInfo.buildConfig.buildSettings = Object.assign(makeInfo.buildConfig.buildSettings, config.buildSettings)
-        } else {
-            makeInfo.buildConfig = config;
-
-        }
-
-    }
-
-
-    return makeInfo;
-}
-
-
-var unhandledBuildPhases = []
-
-function handleBuildPhase(buildPhase, obj, makeInfo) {
-    var buildPhaseComment = buildPhase.comment
-    switch (buildPhaseComment) {
-        case "Sources":
-            // console.log("Sources - This step is compiliation");
-            makeInfo = generateMakeForSourcePhase(obj, buildPhase, makeInfo)
-            break;
-        case "Headers":
-            // console.warn("Unknown what the Headers step involves");
-            break;
-        case "Copy Headers":
-            // console.log("This step copies Header Files from a given location, to another")
-            makeInfo = makeCopyHeaderSection(obj, buildPhase, makeInfo)
-            break;
-        case "CopyFiles":
-            //Again, as far as I can tell we don't need to do anything special
-            break;
-        case "Frameworks":
-            //NOTE: TODO: Assuming that the Frameworks build phase is a dependency anything
-            makeInfo = makeFrameworkSection(obj, buildPhase, makeInfo)
-            break;
-        default:
-            console.log("Not sure how to handle buildPhase of " + buildPhaseComment)
-            if (unhandledBuildPhases.indexOf(buildPhaseComment) == -1) {
-                unhandledBuildPhases.push(buildPhaseComment)
-            }
-    }
-    return makeInfo
-}
-
-
-function makeFrameworkSection(obj, buildPhase, makeInfo) {
-    //Get the buildPhase 
-    // obj.frameworkBuildPhase;
-    makeInfo.depends = [];
-    var data = obj.frameworkBuildPhase[buildPhase.value];
-    for (file of data.files) {
-        // console.log(file)
-        // getFilePath( obj, file )
-        // console.log(obj.files[file.value])
-        var a = obj.buildFiles[file.value]
-        makeInfo.depends.push(obj.buildFiles[file.value])
-
-    }
-    return makeInfo;
-}
-
-
-function generateMakeForSourcePhase(obj, buildPhase, makeInfo) {
-    var sourceBuildPhase = obj.sourceBuildPhase;
-
-    // console.log("The following files would be compiled")
-    //Set up saving
-    makeInfo.sourceFiles = []
-    //The key to access is the buildPhase key 
-
-    var key = buildPhase.value;
-    // var fileObj = console.log(sourceBuildPhase[key].files )
-    for (file of sourceBuildPhase[key].files) {
-        // console.log(file.value)
-
-        //Get the detail from the buildFileSection
-        var fileRef = obj.buildFiles[file.value].fileRef;
-
-        //Use this to get the path
-        var file = obj.files[fileRef];
-        var pathOfFile = obj.files[fileRef].path;
-        // console.log(pathOfFile);
-
-        makeInfo.sourceFiles.push({ path: pathOfFile, fileRef: fileRef, obj: obj.files[fileRef] })
-    }
-    //Get the actual information about the file 
-
-    return makeInfo
-}
-
-
-function makeCopyHeaderSection(obj, phase, makeInfo) {
-    //Set up the saving
-    makeInfo.copyHeaders = {
-        destination: null,
-        filesToCopy: []
-    }
-    //Get the copy header section for the given key
-    var info = (obj.copyFiles[phase.value])
-
-    var destination = info.dstPath;
-    var destinationParent = info.dstSubFolderSpec;
-
-    makeInfo.copyHeaders.destination = destination;
-
-    //Get the files from the buildFiles section 
-    for (file of info.files) {
-        //Gets the fileRef
-        // console.log(obj.buildFiles[file.value]);
-
-        //Get the path to the file from the projectFiles
-        console.log("line: 145")
-        console.log(obj.files[obj.buildFiles[file.value].fileRef]);
-
-        // //TODO: Do something with them.
-        makeInfo.copyHeaders.filesToCopy.push({
-            fileRef: obj.buildFiles[file.value].fileRef,
-            fileObj: obj.files[obj.buildFiles[file.value].fileRef],
-            path: obj.files[obj.buildFiles[file.value].fileRef].path
-        })
-    }
-
-    return makeInfo;
-}
 
 
 
@@ -405,65 +269,9 @@ function generateMakefiles(makeInfos, obj) {
 //Then merge with the folder that contains the .xcodeproj
 //Therefore absolute path
 
-//use projObj.filePath 
-function getFilePath(projObj, fileObj) {
-    //We are accessing projObj.pbxGroup
-    var fileRef = fileObj.fileRef
-    //TODO: Handle recursion in deeper layers.
-    for (var key in projObj.pbxGroup) {
-        if (!isComment(key)) {
-            // console.log(key)
-            //Loop through the folder
-            for (var secondKey in projObj.pbxGroup[key].children) {
-                // console.log(projObj.pbxGroup[key].children[secondKey])
-                var folderObj = projObj.pbxGroup[key].children[secondKey]
-                if (folderObj.value == fileRef) {
-                    // console.log("Found it!");
-                    //From here we can start generating a path; 
-                    if (projObj.pbxGroup[key].path != null) {
-                        //We have to find the parent of the folderObj now.
-                        //But the path so far is: 
-                        var pathSoFar = getFilePath(projObj, { fileRef: key, path: '' }) + projObj.pbxGroup[key].path + '/' + fileObj.path;
-                        return pathSoFar;
-                    } else {
-                        var pathSplit = projObj.filePath.split('/');
-                        var path = '';
-                        for (var i = 0; i < pathSplit.length; i++) {
-                            if (pathSplit[i].search(".xcodeproj") != -1) {
-                                for (var j = 0; j < i; j++) {
-                                    path += pathSplit[j] + '/'
-                                }
-                            }
-                        }
-                        return path + fileObj.path;
-                    }
-                }
-            }
-        }
-    }
-    console.warn("Couldn't find a file");
-    console.warn(util.inspect(fileObj))
 
-}
 
-function getRootProjFolder(makeInfo) {
-    //Far out this is hacky, and feels wrong
-    //Going to chuck a solid todo that I never come back to
-    //TODO: Make this nicer 
-    var a = makeInfo.path.split('/');
-    var path = '';
 
-    for (var i = 0; i < a.length; i++) {
-        if (a[i].search(".xcodeproj") != -1) {
-            for (var j = 0; j < i; j++) {
-                path += a[j] + "/";
-            }
-            // path += a[i].replace(".xcodeproj", "/");
-            // console.log("line 273: " + path)
-            return path;
-        }
-    }
-}
 
 
 // start("./node_modules/react-native/Libraries/ART/ART.xcodeproj/project.pbxproj")
@@ -495,14 +303,6 @@ function start(pathToProject) {
 
 
 
-//Should be a library function
-function isComment(string) {
-    if (string.match('_comment')) {
-        return true;
-    } else {
-        return false;
-    }
-}
 
 
 /* 
